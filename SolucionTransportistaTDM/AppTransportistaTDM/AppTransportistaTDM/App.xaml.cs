@@ -10,7 +10,13 @@ namespace AppTransportistaTDM
 {
     public partial class App : Application
     {
+        #region Properties
         public static NavigationPage Navigator { get; internal set; }
+        public static MasterPage Master { get; internal set; }
+
+        //public static User CurrentUser { get; internal set; }
+        #endregion
+
 
         public App()
         {
