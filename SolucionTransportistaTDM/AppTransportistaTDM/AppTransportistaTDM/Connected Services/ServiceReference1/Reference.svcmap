@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="adfd14c4-5c45-47cd-93bc-1a0db042f131" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>true</GenerateAsynchronousMethods>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings>
+      <CollectionMapping TypeName="System.Collections.ObjectModel.ObservableCollection`1" Category="List" />
+    </CollectionMappings>
+    <GenerateSerializableTypes>false</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://tdmdigitalqa.azurewebsites.net/Service1.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="Service1.xsd" MetadataType="Schema" ID="2029c1c3-e95d-45c4-9810-7b4c86a2dee7" SourceId="1" SourceUrl="http://tdmdigitalqa.azurewebsites.net/Service1.svc?xsd=xsd10" />
+    <MetadataFile FileName="Service11.xsd" MetadataType="Schema" ID="6adb0673-1a24-46e3-a058-321fb65a7cac" SourceId="1" SourceUrl="http://tdmdigitalqa.azurewebsites.net/Service1.svc?xsd=xsd2" />
+    <MetadataFile FileName="Service12.xsd" MetadataType="Schema" ID="29631a54-39f8-4ab0-875a-8792e0a7a5ef" SourceId="1" SourceUrl="http://tdmdigitalqa.azurewebsites.net/Service1.svc?xsd=xsd9" />
+    <MetadataFile FileName="Service1.wsdl" MetadataType="Wsdl" ID="6869f393-c548-40eb-91e2-6810e70b2660" SourceId="1" SourceUrl="http://tdmdigitalqa.azurewebsites.net/Service1.svc?wsdl" />
+    <MetadataFile FileName="Service13.xsd" MetadataType="Schema" ID="b93d8363-0930-40da-b13c-178c39b4ff51" SourceId="1" SourceUrl="http://tdmdigitalqa.azurewebsites.net/Service1.svc?xsd=xsd6" />
+    <MetadataFile FileName="Service14.xsd" MetadataType="Schema" ID="fa2afb20-f2cd-406c-ae28-b6dd84fe450b" SourceId="1" SourceUrl="http://tdmdigitalqa.azurewebsites.net/Service1.svc?xsd=xsd4" />
+    <MetadataFile FileName="Service15.xsd" MetadataType="Schema" ID="9617758e-f6d5-4885-9b37-1ae4b9c51d89" SourceId="1" SourceUrl="http://tdmdigitalqa.azurewebsites.net/Service1.svc?xsd=xsd7" />
+    <MetadataFile FileName="Service16.xsd" MetadataType="Schema" ID="b76bf503-3959-4858-9bfb-d211c00874bd" SourceId="1" SourceUrl="http://tdmdigitalqa.azurewebsites.net/Service1.svc?xsd=xsd1" />
+    <MetadataFile FileName="Service1.disco" MetadataType="Disco" ID="b7099ec1-ae14-42c3-909a-8ce1e4ff1a04" SourceId="1" SourceUrl="http://tdmdigitalqa.azurewebsites.net/Service1.svc?disco" />
+    <MetadataFile FileName="Service17.xsd" MetadataType="Schema" ID="285f2536-7aff-46f5-8135-be502bbb48f9" SourceId="1" SourceUrl="http://tdmdigitalqa.azurewebsites.net/Service1.svc?xsd=xsd3" />
+    <MetadataFile FileName="Service18.xsd" MetadataType="Schema" ID="9ee1377f-2e8d-4427-9a5b-f66d0cad613e" SourceId="1" SourceUrl="http://tdmdigitalqa.azurewebsites.net/Service1.svc?xsd=xsd5" />
+    <MetadataFile FileName="Service19.xsd" MetadataType="Schema" ID="ebc8b14c-e448-4545-92d1-3d486d5e3873" SourceId="1" SourceUrl="http://tdmdigitalqa.azurewebsites.net/Service1.svc?xsd=xsd0" />
+    <MetadataFile FileName="Service110.xsd" MetadataType="Schema" ID="c9fd2a6a-53ac-474f-b9b8-d8fba359816b" SourceId="1" SourceUrl="http://tdmdigitalqa.azurewebsites.net/Service1.svc?xsd=xsd8" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

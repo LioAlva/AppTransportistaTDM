@@ -1,0 +1,800 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://tempuri.org/" elementFormDefault="qualified" targetNamespace="http://tempuri.org/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://tdmdigitalqa.azurewebsites.net/Service1.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/Voxiva.TDMDigitalBE.Mobile.WS" />
+  <xs:import schemaLocation="http://tdmdigitalqa.azurewebsites.net/Service1.svc?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/Voxiva.TDMDigitalBE.Modelo.DTO" />
+  <xs:import schemaLocation="http://tdmdigitalqa.azurewebsites.net/Service1.svc?xsd=xsd9" namespace="http://schemas.microsoft.com/Message" />
+  <xs:element name="GetData">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="value" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetDataResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetDataResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetDataUsingDataContract">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/Voxiva.TDMDigitalBE.Mobile.WS" minOccurs="0" name="composite" nillable="true" type="q1:CompositeType" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetDataUsingDataContractResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/Voxiva.TDMDigitalBE.Mobile.WS" minOccurs="0" name="GetDataUsingDataContractResult" nillable="true" type="q2:CompositeType" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="accesoLoginCliente">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="param1" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="param2" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="param3" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="accesoLoginClienteResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q3="http://schemas.datacontract.org/2004/07/Voxiva.TDMDigitalBE.Modelo.DTO" minOccurs="0" name="accesoLoginClienteResult" nillable="true" type="q3:MobileResponseOfMobileLoginLBPOpb6l" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="obtenerDataHomeAppCliente">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="param1" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="obtenerDataHomeAppClienteResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q4="http://schemas.datacontract.org/2004/07/Voxiva.TDMDigitalBE.Modelo.DTO" minOccurs="0" name="obtenerDataHomeAppClienteResult" nillable="true" type="q4:MobileResponseOfMobileHomeDataAppClienteLBPOpb6l" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="obtenerItemTabla">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="param1" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="obtenerItemTablaResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q5="http://schemas.datacontract.org/2004/07/Voxiva.TDMDigitalBE.Modelo.DTO" minOccurs="0" name="obtenerItemTablaResult" nillable="true" type="q5:MobileResponseOfMobileConsultaItemTablaLBPOpb6l" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="obtenerDataComercial">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="param1" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="obtenerDataComercialResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q6="http://schemas.datacontract.org/2004/07/Voxiva.TDMDigitalBE.Modelo.DTO" minOccurs="0" name="obtenerDataComercialResult" nillable="true" type="q6:MobileResponseOfMobileDataComercialLBPOpb6l" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="registrarRequerimiento">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="param1" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="param2" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="param3" type="xs:int" />
+        <xs:element minOccurs="0" name="param4" type="xs:int" />
+        <xs:element minOccurs="0" name="param5" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="registrarRequerimientoResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q7="http://schemas.datacontract.org/2004/07/Voxiva.TDMDigitalBE.Modelo.DTO" minOccurs="0" name="registrarRequerimientoResult" nillable="true" type="q7:MobileResponseOfMobileRequerimientoLBPOpb6l" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="listarRequerimiento">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="param1" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="listarRequerimientoResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q8="http://schemas.datacontract.org/2004/07/Voxiva.TDMDigitalBE.Modelo.DTO" minOccurs="0" name="listarRequerimientoResult" nillable="true" type="q8:MobileResponseOfMobileRequerimientoListLBPOpb6l" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="obtenerRequerimiento">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="param1" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="obtenerRequerimientoResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q9="http://schemas.datacontract.org/2004/07/Voxiva.TDMDigitalBE.Modelo.DTO" minOccurs="0" name="obtenerRequerimientoResult" nillable="true" type="q9:MobileResponseOfMobileRequerimientoDetalleLBPOpb6l" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="consultarClienteSAP">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="param1" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="param2" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="consultarClienteSAPResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q10="http://schemas.datacontract.org/2004/07/Voxiva.TDMDigitalBE.Modelo.DTO" minOccurs="0" name="consultarClienteSAPResult" nillable="true" type="q10:MobileResponseOfZ_SD_CONSULTA_CLIENTEResponseU6e2shzv" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="listarEvento">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="EsInterna" type="xs:int" />
+        <xs:element minOccurs="0" name="IdContactoCliente" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="listarEventoResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q11="http://schemas.datacontract.org/2004/07/Voxiva.TDMDigitalBE.Modelo.DTO" minOccurs="0" name="listarEventoResult" nillable="true" type="q11:MobileResponseOfMobileEventoListLBPOpb6l" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CreaActualizarContactoEvento">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="IdContactoCliente" type="xs:int" />
+        <xs:element minOccurs="0" name="IdEvento" type="xs:int" />
+        <xs:element minOccurs="0" name="IdUsuario" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CreaActualizarContactoEventoResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q12="http://schemas.datacontract.org/2004/07/Voxiva.TDMDigitalBE.Modelo.DTO" minOccurs="0" name="CreaActualizarContactoEventoResult" nillable="true" type="q12:MobileResponseOfMobileContactoEventoLBPOpb6l" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CrearActualizarEvento">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="IdEvento" type="xs:int" />
+        <xs:element minOccurs="0" name="Denominacion" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="FechaInicio" type="xs:dateTime" />
+        <xs:element minOccurs="0" name="FechaFin" type="xs:dateTime" />
+        <xs:element minOccurs="0" name="Estado" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="IdUsuarioCreacion" type="xs:int" />
+        <xs:element minOccurs="0" name="IdUsuarioActualizacion" type="xs:int" />
+        <xs:element minOccurs="0" name="Expositor" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Ubicacion" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Detalle" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="TipoEvento" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CrearActualizarEventoResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q13="http://schemas.datacontract.org/2004/07/Voxiva.TDMDigitalBE.Modelo.DTO" minOccurs="0" name="CrearActualizarEventoResult" nillable="true" type="q13:MobileResponseOfMobileContactoEventoLBPOpb6l" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="consultarCuentaCorriente">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="param1" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="consultarCuentaCorrienteResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q14="http://schemas.datacontract.org/2004/07/Voxiva.TDMDigitalBE.Modelo.DTO" minOccurs="0" name="consultarCuentaCorrienteResult" nillable="true" type="q14:MobileResponseOfMobileCuentaCorrienteLBPOpb6l" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="consultarDocumentoFactura">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="param1" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="param2" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="consultarDocumentoFacturaResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q15="http://schemas.datacontract.org/2004/07/Voxiva.TDMDigitalBE.Modelo.DTO" minOccurs="0" name="consultarDocumentoFacturaResult" nillable="true" type="q15:MobileResponseOfMobileFacturaListLBPOpb6l" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="obtenerTransportista">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="IdTransportista" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="obtenerTransportistaResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q16="http://schemas.datacontract.org/2004/07/Voxiva.TDMDigitalBE.Modelo.DTO" minOccurs="0" name="obtenerTransportistaResult" nillable="true" type="q16:MobileResponseOfMobileTransportistaListLBPOpb6l" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AgregarTransportista">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="NombreEmpresa" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="RUC" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Calle" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Referencia" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="CodigoPostal" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="NombreContacto" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Telefono" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Telefono2" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Correo" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Correo2" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="IdDistrito" type="xs:int" />
+        <xs:element minOccurs="0" name="Estado" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="IdUsuario" type="xs:int" />
+        <xs:element minOccurs="0" name="IdEmpresaMonitoreo" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AgregarTransportistaResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q17="http://schemas.datacontract.org/2004/07/Voxiva.TDMDigitalBE.Modelo.DTO" minOccurs="0" name="AgregarTransportistaResult" nillable="true" type="q17:MobileResponseOfMobileTransportistaLBPOpb6l" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ListarPaises">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ListarPaisesResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q18="http://schemas.datacontract.org/2004/07/Voxiva.TDMDigitalBE.Modelo.DTO" minOccurs="0" name="ListarPaisesResult" nillable="true" type="q18:MobileResponseOfMobilePaisListLBPOpb6l" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ListarDepartamentos">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="IdPais" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ListarDepartamentosResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q19="http://schemas.datacontract.org/2004/07/Voxiva.TDMDigitalBE.Modelo.DTO" minOccurs="0" name="ListarDepartamentosResult" nillable="true" type="q19:MobileResponseOfMobileDepartamentoListLBPOpb6l" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ListarDistrito">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="IdProvincia" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ListarDistritoResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q20="http://schemas.datacontract.org/2004/07/Voxiva.TDMDigitalBE.Modelo.DTO" minOccurs="0" name="ListarDistritoResult" nillable="true" type="q20:MobileResponseOfMobileDistritoListLBPOpb6l" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ListarProvincias">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="IdDpto" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ListarProvinciasResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q21="http://schemas.datacontract.org/2004/07/Voxiva.TDMDigitalBE.Modelo.DTO" minOccurs="0" name="ListarProvinciasResult" nillable="true" type="q21:MobileResponseOfMobileProvinciaListLBPOpb6l" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObtenerUnidadTransportista">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="IdUnidad" type="xs:int" />
+        <xs:element minOccurs="0" name="IdTransportista" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObtenerUnidadTransportistaResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q22="http://schemas.datacontract.org/2004/07/Voxiva.TDMDigitalBE.Modelo.DTO" minOccurs="0" name="ObtenerUnidadTransportistaResult" nillable="true" type="q22:MobileResponseOfMobileUnidadTransporteDTOListLBPOpb6l" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AgregarUnidadTransportista">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="Placa" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Placa2" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Chofer" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="DNIChofer" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="ChoferAlterno" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="DNIChoferAlterno" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="IdTransportista" type="xs:int" />
+        <xs:element minOccurs="0" name="Estado" type="xs:int" />
+        <xs:element minOccurs="0" name="IdUsuarioCreacion" type="xs:int" />
+        <xs:element minOccurs="0" name="IdTipoUnidad" type="xs:int" />
+        <xs:element minOccurs="0" name="CodTracking" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AgregarUnidadTransportistaResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q23="http://schemas.datacontract.org/2004/07/Voxiva.TDMDigitalBE.Modelo.DTO" minOccurs="0" name="AgregarUnidadTransportistaResult" nillable="true" type="q23:MobileResponseOfMobileUnidadTransporteDTOLBPOpb6l" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObtenerTiposUnidad">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObtenerTiposUnidadResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q24="http://schemas.datacontract.org/2004/07/Voxiva.TDMDigitalBE.Modelo.DTO" minOccurs="0" name="ObtenerTiposUnidadResult" nillable="true" type="q24:MobileResponseOfMobileConsultaItemTablaLBPOpb6l" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="postImage">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q25="http://schemas.microsoft.com/Message" name="data" type="q25:StreamBody" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="postImageResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q26="http://schemas.datacontract.org/2004/07/Voxiva.TDMDigitalBE.Modelo.DTO" minOccurs="0" name="postImageResult" nillable="true" type="q26:MobileResp" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="registrarRequerimientoImg">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q27="http://schemas.microsoft.com/Message" name="data" type="q27:StreamBody" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="registrarRequerimientoImgResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q28="http://schemas.datacontract.org/2004/07/Voxiva.TDMDigitalBE.Modelo.DTO" minOccurs="0" name="registrarRequerimientoImgResult" nillable="true" type="q28:MobileResponseOfMobileRequerimientoLBPOpb6l" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="agregarAdjuntoRequerimiento">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q29="http://schemas.microsoft.com/Message" name="data" type="q29:StreamBody" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="agregarAdjuntoRequerimientoResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q30="http://schemas.datacontract.org/2004/07/Voxiva.TDMDigitalBE.Modelo.DTO" minOccurs="0" name="agregarAdjuntoRequerimientoResult" nillable="true" type="q30:MobileResponseOfMobileRequerimientoLBPOpb6l" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="guardaModificaScoring">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="IdRequerimiento" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="IdContactoCliente" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="IdTipoScoring" type="xs:int" />
+        <xs:element minOccurs="0" name="Cantidad" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="guardaModificaScoringResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q31="http://schemas.datacontract.org/2004/07/Voxiva.TDMDigitalBE.Modelo.DTO" minOccurs="0" name="guardaModificaScoringResult" nillable="true" type="q31:MobileResponseOfMobileMantenedorScoringLBPOpb6l" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="consultarEntregaPedido">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="param1" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="param2" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="consultarEntregaPedidoResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q32="http://schemas.datacontract.org/2004/07/Voxiva.TDMDigitalBE.Modelo.DTO" minOccurs="0" name="consultarEntregaPedidoResult" nillable="true" type="q32:MobileResponseOfMobileEntregaPedidoListLBPOpb6l" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ListarEstadosByEntregaByPedido">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="codEntrega" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="codPedido" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ListarEstadosByEntregaByPedidoResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q33="http://schemas.datacontract.org/2004/07/Voxiva.TDMDigitalBE.Modelo.DTO" minOccurs="0" name="ListarEstadosByEntregaByPedidoResult" nillable="true" type="q33:MobileResponseOfMobileEntregaEstadoListLBPOpb6l" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="pedidosbyIdClientesBDOE">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="OrdenCompra" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="pedidosbyIdClientesBDOEResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q34="http://schemas.datacontract.org/2004/07/Voxiva.TDMDigitalBE.Modelo.DTO" minOccurs="0" name="pedidosbyIdClientesBDOEResult" nillable="true" type="q34:MobileResponseOfMobileCertificadoCalidadLBPOpb6l" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="enviarCertificadoCorreo">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="NumeroOrden" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="IdContactoCliente" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="enviarCertificadoCorreoResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q35="http://schemas.datacontract.org/2004/07/Voxiva.TDMDigitalBE.Modelo.DTO" minOccurs="0" name="enviarCertificadoCorreoResult" nillable="true" type="q35:MobileResponseOfMobileEntregaCerticadoLBPOpb6l" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="obtenerDatosTracking">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="placa" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="placa2" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="obtenerDatosTrackingResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q36="http://schemas.datacontract.org/2004/07/Voxiva.TDMDigitalBE.Modelo.DTO" minOccurs="0" name="obtenerDatosTrackingResult" nillable="true" type="q36:MobileResponseOfMobileLTResponseLBPOpb6l" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ingresarCertificadoCalidad">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q37="http://schemas.microsoft.com/Message" name="data" type="q37:StreamBody" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ingresarCertificadoCalidadResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q38="http://schemas.datacontract.org/2004/07/Voxiva.TDMDigitalBE.Modelo.DTO" minOccurs="0" name="ingresarCertificadoCalidadResult" nillable="true" type="q38:MobileResp" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ClienteExisteEnSap">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="param1" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ClienteExisteEnSapResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q39="http://schemas.datacontract.org/2004/07/Voxiva.TDMDigitalBE.Modelo.DTO" minOccurs="0" name="ClienteExisteEnSapResult" nillable="true" type="q39:MobileResponseOfClienteDTOLBPOpb6l" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="RegistrarContactoClienteDesdeCliente">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="param1" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="param2" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="param3" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="param4" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="param5" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="RegistrarContactoClienteDesdeClienteResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q40="http://schemas.datacontract.org/2004/07/Voxiva.TDMDigitalBE.Modelo.DTO" minOccurs="0" name="RegistrarContactoClienteDesdeClienteResult" nillable="true" type="q40:MobileResponseOfContactoClienteDTOLBPOpb6l" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ValidarPorClientePorCodigoActivacion">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="param1" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="param2" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ValidarPorClientePorCodigoActivacionResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q41="http://schemas.datacontract.org/2004/07/Voxiva.TDMDigitalBE.Modelo.DTO" minOccurs="0" name="ValidarPorClientePorCodigoActivacionResult" nillable="true" type="q41:MobileResponseOfContactoClienteDTOLBPOpb6l" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="HabilitarAppAContactoCliente">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="idContactoCliente" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Clave" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="HabilitarAppAContactoClienteResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q42="http://schemas.datacontract.org/2004/07/Voxiva.TDMDigitalBE.Modelo.DTO" minOccurs="0" name="HabilitarAppAContactoClienteResult" nillable="true" type="q42:MobileResponseOfContactoClienteDTOLBPOpb6l" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="RegistrarMensajeDesdeUsuarioHaciaCliente">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="IdUsuario" type="xs:int" />
+        <xs:element minOccurs="0" name="IdRequerimiento" type="xs:int" />
+        <xs:element minOccurs="0" name="Asunto" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Mensaje" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="RegistrarMensajeDesdeUsuarioHaciaClienteResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q43="http://schemas.datacontract.org/2004/07/Voxiva.TDMDigitalBE.Modelo.DTO" minOccurs="0" name="RegistrarMensajeDesdeUsuarioHaciaClienteResult" nillable="true" type="q43:MobileResponseOfMobileNotificacionLBPOpb6l" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="RegistrarMensajeDesdeClienteHaciaUsuario">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="IdContactoCliente" type="xs:int" />
+        <xs:element minOccurs="0" name="IdRequerimiento" type="xs:int" />
+        <xs:element minOccurs="0" name="Asunto" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Mensaje" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="RegistrarMensajeDesdeClienteHaciaUsuarioResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q44="http://schemas.datacontract.org/2004/07/Voxiva.TDMDigitalBE.Modelo.DTO" minOccurs="0" name="RegistrarMensajeDesdeClienteHaciaUsuarioResult" nillable="true" type="q44:MobileResponseOfMobileNotificacionLBPOpb6l" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ListarMensajes">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="IdRequerimiento" type="xs:int" />
+        <xs:element minOccurs="0" name="IdUsuario" type="xs:int" />
+        <xs:element minOccurs="0" name="IdContactoCliente" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ListarMensajesResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q45="http://schemas.datacontract.org/2004/07/Voxiva.TDMDigitalBE.Modelo.DTO" minOccurs="0" name="ListarMensajesResult" nillable="true" type="q45:MobileResponseOfMobileNotificacionListLBPOpb6l" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="registrarIngreso">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="IdUnidad" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="registrarIngresoResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q46="http://schemas.datacontract.org/2004/07/Voxiva.TDMDigitalBE.Modelo.DTO" minOccurs="0" name="registrarIngresoResult" nillable="true" type="q46:MobileResponseOfMobileRegistrosUnidadTDMLBPOpb6l" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="registrarCarga">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="IdIngresoEntrega" type="xs:int" />
+        <xs:element minOccurs="0" name="CodEntrega" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="FechaEstimadaLlegada" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="registrarCargaResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q47="http://schemas.datacontract.org/2004/07/Voxiva.TDMDigitalBE.Modelo.DTO" minOccurs="0" name="registrarCargaResult" nillable="true" type="q47:MobileResponseOfMobileRegistrosUnidadTDMLBPOpb6l" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="registrarSalida">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="IdIngresoEntrega" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="registrarSalidaResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q48="http://schemas.datacontract.org/2004/07/Voxiva.TDMDigitalBE.Modelo.DTO" minOccurs="0" name="registrarSalidaResult" nillable="true" type="q48:MobileResponseOfMobileRegistrosUnidadTDMLBPOpb6l" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="registrarInicioStandByPorCodEntrega">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="CodEntrega" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="registrarInicioStandByPorCodEntregaResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q49="http://schemas.datacontract.org/2004/07/Voxiva.TDMDigitalBE.Modelo.DTO" minOccurs="0" name="registrarInicioStandByPorCodEntregaResult" nillable="true" type="q49:MobileResponseOfMobileRegistrosUnidadTDMLBPOpb6l" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="registrarFinStandByPorCodEntrega">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="CodEntrega" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="registrarFinStandByPorCodEntregaResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q50="http://schemas.datacontract.org/2004/07/Voxiva.TDMDigitalBE.Modelo.DTO" minOccurs="0" name="registrarFinStandByPorCodEntregaResult" nillable="true" type="q50:MobileResponseOfMobileRegistrosUnidadTDMLBPOpb6l" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="registrarInicioDescargaPorCodEntrega">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="CodEntrega" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="registrarInicioDescargaPorCodEntregaResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q51="http://schemas.datacontract.org/2004/07/Voxiva.TDMDigitalBE.Modelo.DTO" minOccurs="0" name="registrarInicioDescargaPorCodEntregaResult" nillable="true" type="q51:MobileResponseOfMobileRegistrosUnidadTDMLBPOpb6l" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="registrarEntregaPorCodEntrega">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="CodEntrega" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="registrarEntregaPorCodEntregaResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q52="http://schemas.datacontract.org/2004/07/Voxiva.TDMDigitalBE.Modelo.DTO" minOccurs="0" name="registrarEntregaPorCodEntregaResult" nillable="true" type="q52:MobileResponseOfMobileRegistrosUnidadTDMLBPOpb6l" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObtenerEntregaPorGuiaLegal">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GuiaLegal" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="RUC" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObtenerEntregaPorGuiaLegalResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q53="http://schemas.datacontract.org/2004/07/Voxiva.TDMDigitalBE.Modelo.DTO" minOccurs="0" name="ObtenerEntregaPorGuiaLegalResult" nillable="true" type="q53:MobileResponseOfMobileEntregaDTOLBPOpb6l" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="listaEstadosPorEntrega">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="CodEntrega" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="listaEstadosPorEntregaResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q54="http://schemas.datacontract.org/2004/07/Voxiva.TDMDigitalBE.Modelo.DTO" minOccurs="0" name="listaEstadosPorEntregaResult" nillable="true" type="q54:MobileResponseOfMobileListEstadosDTOLBPOpb6l" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="listarCargaEntregaPorEstado">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="IdIngresoEntrega" type="xs:int" />
+        <xs:element minOccurs="0" name="Estado" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="listarCargaEntregaPorEstadoResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q55="http://schemas.datacontract.org/2004/07/Voxiva.TDMDigitalBE.Modelo.DTO" minOccurs="0" name="listarCargaEntregaPorEstadoResult" nillable="true" type="q55:MobileResponseOfMobileListCargaEntregaDTOLBPOpb6l" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="listarNotificacionPushApp">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="param1" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="listarNotificacionPushAppResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q56="http://schemas.datacontract.org/2004/07/Voxiva.TDMDigitalBE.Modelo.DTO" minOccurs="0" name="listarNotificacionPushAppResult" nillable="true" type="q56:MobileResponseOfMobileNotificacionPushListLBPOpb6l" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

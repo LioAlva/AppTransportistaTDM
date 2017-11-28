@@ -6,30 +6,53 @@
              BindingContext="{Binding Main, Source={StaticResource Locator}}"
              Title="menu">
 
-    <ListView 
-    ItemsSource="{Binding Menu}"
-    HasUnevenRows="True">
-        <ListView.ItemTemplate>
-            <DataTemplate>
-                <ViewCell>
-                    <Grid>
-                        <Grid.ColumnDefinitions>
-                            <ColumnDefinition Width="Auto"></ColumnDefinition>
-                            <ColumnDefinition Width="*"></ColumnDefinition>
-                        </Grid.ColumnDefinitions>
-                        <Image 
-              Source="{Binding Icon}"
-              WidthRequest="50"
-              HeightRequest="50"/>
-                        <Label 
-              Grid.Column="1"
-              VerticalOptions="Center"
-              TextColor="{StaticResource MenuFontColor}"
-              Text="{Binding Title}"/>
-                    </Grid>
-                </ViewCell>
-            </DataTemplate>
-        </ListView.ItemTemplate>
+    <StackLayout Padding="8">
+        <StackLayout Orientation="Horizontal">
+            <Label Text="E-commerce"
+               TextColor="{StaticResource AccentColor1}"
+               FontSize="24" 
+               FontAttributes="Bold"
+               HorizontalOptions="StartAndExpand"
+               VerticalOptions="Center"></Label>
+            <Image Source="ecommerce.png"
+               WidthRequest="80" HeightRequest="80"
+               HorizontalOptions="End"
+               VerticalOptions="Center"></Image>
+           
+        </StackLayout>
 
-    </ListView>
+        <BoxView HeightRequest="3" 
+                 Color="{StaticResource AccentColor1}"></BoxView>
+
+        <ListView 
+                ItemsSource="{Binding Menu}"
+                HasUnevenRows="True">
+                        <ListView.ItemTemplate>
+                            <DataTemplate>
+                                <ViewCell>
+                                    <Grid>
+                                        <Grid.ColumnDefinitions>
+                                            <ColumnDefinition Width="Auto"></ColumnDefinition>
+                                            <ColumnDefinition Width="*"></ColumnDefinition>
+                                        </Grid.ColumnDefinitions>
+                                        <!--<Image 
+                          Source="{Binding Icon}"
+                          WidthRequest="50"
+                          HeightRequest="50"/>-->
+                                        <Label 
+                          Grid.Column="1"
+                          VerticalOptions="Center"
+                          TextColor="{StaticResource MenuFontColor}"
+                          Text="{Binding Title}"/>
+                                    </Grid>
+                                </ViewCell>
+                            </DataTemplate>
+                        </ListView.ItemTemplate>
+
+        </ListView>
+
+    </StackLayout>
+
+
+     
 </ContentPage>

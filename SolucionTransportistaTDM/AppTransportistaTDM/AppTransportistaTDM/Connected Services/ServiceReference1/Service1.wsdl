@@ -1,0 +1,541 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="Service1" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="http://tdmdigitalqa.azurewebsites.net/Service1.svc?xsd=xsd0" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="http://tdmdigitalqa.azurewebsites.net/Service1.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://tdmdigitalqa.azurewebsites.net/Service1.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/Voxiva.TDMDigitalBE.Mobile.WS" />
+      <xsd:import schemaLocation="http://tdmdigitalqa.azurewebsites.net/Service1.svc?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/Voxiva.TDMDigitalBE.Modelo.DTO" />
+      <xsd:import schemaLocation="http://tdmdigitalqa.azurewebsites.net/Service1.svc?xsd=xsd4" namespace="http://schemas.datacontract.org/2004/07/Voxiva.TDMDigitalBE.Modelo.Domain" />
+      <xsd:import schemaLocation="http://tdmdigitalqa.azurewebsites.net/Service1.svc?xsd=xsd5" namespace="http://schemas.datacontract.org/2004/07/Voxiva.TDMDigitalBE.Servicios.SAPServiceReference" />
+      <xsd:import schemaLocation="http://tdmdigitalqa.azurewebsites.net/Service1.svc?xsd=xsd6" namespace="http://schemas.datacontract.org/2004/07/System.ComponentModel" />
+      <xsd:import schemaLocation="http://tdmdigitalqa.azurewebsites.net/Service1.svc?xsd=xsd7" namespace="http://schemas.datacontract.org/2004/07/System" />
+      <xsd:import schemaLocation="http://tdmdigitalqa.azurewebsites.net/Service1.svc?xsd=xsd8" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+      <xsd:import schemaLocation="http://tdmdigitalqa.azurewebsites.net/Service1.svc?xsd=xsd9" namespace="http://schemas.microsoft.com/Message" />
+      <xsd:import schemaLocation="http://tdmdigitalqa.azurewebsites.net/Service1.svc?xsd=xsd10" namespace="http://schemas.datacontract.org/2004/07/Voxiva.TDMDigitalBE.Modelo.Clases" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IService1_GetData_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetData" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetData_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetDataResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetDataUsingDataContract_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetDataUsingDataContract" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetDataUsingDataContract_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetDataUsingDataContractResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_accesoLoginCliente_InputMessage">
+    <wsdl:part name="parameters" element="tns:accesoLoginCliente" />
+  </wsdl:message>
+  <wsdl:message name="IService1_accesoLoginCliente_OutputMessage">
+    <wsdl:part name="parameters" element="tns:accesoLoginClienteResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_obtenerDataHomeAppCliente_InputMessage">
+    <wsdl:part name="parameters" element="tns:obtenerDataHomeAppCliente" />
+  </wsdl:message>
+  <wsdl:message name="IService1_obtenerDataHomeAppCliente_OutputMessage">
+    <wsdl:part name="parameters" element="tns:obtenerDataHomeAppClienteResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_obtenerItemTabla_InputMessage">
+    <wsdl:part name="parameters" element="tns:obtenerItemTabla" />
+  </wsdl:message>
+  <wsdl:message name="IService1_obtenerItemTabla_OutputMessage">
+    <wsdl:part name="parameters" element="tns:obtenerItemTablaResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_obtenerDataComercial_InputMessage">
+    <wsdl:part name="parameters" element="tns:obtenerDataComercial" />
+  </wsdl:message>
+  <wsdl:message name="IService1_obtenerDataComercial_OutputMessage">
+    <wsdl:part name="parameters" element="tns:obtenerDataComercialResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_registrarRequerimiento_InputMessage">
+    <wsdl:part name="parameters" element="tns:registrarRequerimiento" />
+  </wsdl:message>
+  <wsdl:message name="IService1_registrarRequerimiento_OutputMessage">
+    <wsdl:part name="parameters" element="tns:registrarRequerimientoResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_listarRequerimiento_InputMessage">
+    <wsdl:part name="parameters" element="tns:listarRequerimiento" />
+  </wsdl:message>
+  <wsdl:message name="IService1_listarRequerimiento_OutputMessage">
+    <wsdl:part name="parameters" element="tns:listarRequerimientoResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_obtenerRequerimiento_InputMessage">
+    <wsdl:part name="parameters" element="tns:obtenerRequerimiento" />
+  </wsdl:message>
+  <wsdl:message name="IService1_obtenerRequerimiento_OutputMessage">
+    <wsdl:part name="parameters" element="tns:obtenerRequerimientoResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_consultarClienteSAP_InputMessage">
+    <wsdl:part name="parameters" element="tns:consultarClienteSAP" />
+  </wsdl:message>
+  <wsdl:message name="IService1_consultarClienteSAP_OutputMessage">
+    <wsdl:part name="parameters" element="tns:consultarClienteSAPResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_listarEvento_InputMessage">
+    <wsdl:part name="parameters" element="tns:listarEvento" />
+  </wsdl:message>
+  <wsdl:message name="IService1_listarEvento_OutputMessage">
+    <wsdl:part name="parameters" element="tns:listarEventoResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_CreaActualizarContactoEvento_InputMessage">
+    <wsdl:part name="parameters" element="tns:CreaActualizarContactoEvento" />
+  </wsdl:message>
+  <wsdl:message name="IService1_CreaActualizarContactoEvento_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CreaActualizarContactoEventoResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_CrearActualizarEvento_InputMessage">
+    <wsdl:part name="parameters" element="tns:CrearActualizarEvento" />
+  </wsdl:message>
+  <wsdl:message name="IService1_CrearActualizarEvento_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CrearActualizarEventoResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_consultarCuentaCorriente_InputMessage">
+    <wsdl:part name="parameters" element="tns:consultarCuentaCorriente" />
+  </wsdl:message>
+  <wsdl:message name="IService1_consultarCuentaCorriente_OutputMessage">
+    <wsdl:part name="parameters" element="tns:consultarCuentaCorrienteResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_consultarDocumentoFactura_InputMessage">
+    <wsdl:part name="parameters" element="tns:consultarDocumentoFactura" />
+  </wsdl:message>
+  <wsdl:message name="IService1_consultarDocumentoFactura_OutputMessage">
+    <wsdl:part name="parameters" element="tns:consultarDocumentoFacturaResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_obtenerTransportista_InputMessage">
+    <wsdl:part name="parameters" element="tns:obtenerTransportista" />
+  </wsdl:message>
+  <wsdl:message name="IService1_obtenerTransportista_OutputMessage">
+    <wsdl:part name="parameters" element="tns:obtenerTransportistaResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_AgregarTransportista_InputMessage">
+    <wsdl:part name="parameters" element="tns:AgregarTransportista" />
+  </wsdl:message>
+  <wsdl:message name="IService1_AgregarTransportista_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AgregarTransportistaResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_ListarPaises_InputMessage">
+    <wsdl:part name="parameters" element="tns:ListarPaises" />
+  </wsdl:message>
+  <wsdl:message name="IService1_ListarPaises_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ListarPaisesResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_ListarDepartamentos_InputMessage">
+    <wsdl:part name="parameters" element="tns:ListarDepartamentos" />
+  </wsdl:message>
+  <wsdl:message name="IService1_ListarDepartamentos_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ListarDepartamentosResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_ListarDistrito_InputMessage">
+    <wsdl:part name="parameters" element="tns:ListarDistrito" />
+  </wsdl:message>
+  <wsdl:message name="IService1_ListarDistrito_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ListarDistritoResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_ListarProvincias_InputMessage">
+    <wsdl:part name="parameters" element="tns:ListarProvincias" />
+  </wsdl:message>
+  <wsdl:message name="IService1_ListarProvincias_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ListarProvinciasResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_ObtenerUnidadTransportista_InputMessage">
+    <wsdl:part name="parameters" element="tns:ObtenerUnidadTransportista" />
+  </wsdl:message>
+  <wsdl:message name="IService1_ObtenerUnidadTransportista_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ObtenerUnidadTransportistaResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_AgregarUnidadTransportista_InputMessage">
+    <wsdl:part name="parameters" element="tns:AgregarUnidadTransportista" />
+  </wsdl:message>
+  <wsdl:message name="IService1_AgregarUnidadTransportista_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AgregarUnidadTransportistaResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_ObtenerTiposUnidad_InputMessage">
+    <wsdl:part name="parameters" element="tns:ObtenerTiposUnidad" />
+  </wsdl:message>
+  <wsdl:message name="IService1_ObtenerTiposUnidad_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ObtenerTiposUnidadResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_postImage_InputMessage">
+    <wsdl:part name="parameters" element="tns:postImage" />
+  </wsdl:message>
+  <wsdl:message name="IService1_postImage_OutputMessage">
+    <wsdl:part name="parameters" element="tns:postImageResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_registrarRequerimientoImg_InputMessage">
+    <wsdl:part name="parameters" element="tns:registrarRequerimientoImg" />
+  </wsdl:message>
+  <wsdl:message name="IService1_registrarRequerimientoImg_OutputMessage">
+    <wsdl:part name="parameters" element="tns:registrarRequerimientoImgResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_agregarAdjuntoRequerimiento_InputMessage">
+    <wsdl:part name="parameters" element="tns:agregarAdjuntoRequerimiento" />
+  </wsdl:message>
+  <wsdl:message name="IService1_agregarAdjuntoRequerimiento_OutputMessage">
+    <wsdl:part name="parameters" element="tns:agregarAdjuntoRequerimientoResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_guardaModificaScoring_InputMessage">
+    <wsdl:part name="parameters" element="tns:guardaModificaScoring" />
+  </wsdl:message>
+  <wsdl:message name="IService1_guardaModificaScoring_OutputMessage">
+    <wsdl:part name="parameters" element="tns:guardaModificaScoringResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_consultarEntregaPedido_InputMessage">
+    <wsdl:part name="parameters" element="tns:consultarEntregaPedido" />
+  </wsdl:message>
+  <wsdl:message name="IService1_consultarEntregaPedido_OutputMessage">
+    <wsdl:part name="parameters" element="tns:consultarEntregaPedidoResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_ListarEstadosByEntregaByPedido_InputMessage">
+    <wsdl:part name="parameters" element="tns:ListarEstadosByEntregaByPedido" />
+  </wsdl:message>
+  <wsdl:message name="IService1_ListarEstadosByEntregaByPedido_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ListarEstadosByEntregaByPedidoResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_pedidosbyIdClientesBDOE_InputMessage">
+    <wsdl:part name="parameters" element="tns:pedidosbyIdClientesBDOE" />
+  </wsdl:message>
+  <wsdl:message name="IService1_pedidosbyIdClientesBDOE_OutputMessage">
+    <wsdl:part name="parameters" element="tns:pedidosbyIdClientesBDOEResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_enviarCertificadoCorreo_InputMessage">
+    <wsdl:part name="parameters" element="tns:enviarCertificadoCorreo" />
+  </wsdl:message>
+  <wsdl:message name="IService1_enviarCertificadoCorreo_OutputMessage">
+    <wsdl:part name="parameters" element="tns:enviarCertificadoCorreoResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_obtenerDatosTracking_InputMessage">
+    <wsdl:part name="parameters" element="tns:obtenerDatosTracking" />
+  </wsdl:message>
+  <wsdl:message name="IService1_obtenerDatosTracking_OutputMessage">
+    <wsdl:part name="parameters" element="tns:obtenerDatosTrackingResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_ingresarCertificadoCalidad_InputMessage">
+    <wsdl:part name="parameters" element="tns:ingresarCertificadoCalidad" />
+  </wsdl:message>
+  <wsdl:message name="IService1_ingresarCertificadoCalidad_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ingresarCertificadoCalidadResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_ClienteExisteEnSap_InputMessage">
+    <wsdl:part name="parameters" element="tns:ClienteExisteEnSap" />
+  </wsdl:message>
+  <wsdl:message name="IService1_ClienteExisteEnSap_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ClienteExisteEnSapResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_RegistrarContactoClienteDesdeCliente_InputMessage">
+    <wsdl:part name="parameters" element="tns:RegistrarContactoClienteDesdeCliente" />
+  </wsdl:message>
+  <wsdl:message name="IService1_RegistrarContactoClienteDesdeCliente_OutputMessage">
+    <wsdl:part name="parameters" element="tns:RegistrarContactoClienteDesdeClienteResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_ValidarPorClientePorCodigoActivacion_InputMessage">
+    <wsdl:part name="parameters" element="tns:ValidarPorClientePorCodigoActivacion" />
+  </wsdl:message>
+  <wsdl:message name="IService1_ValidarPorClientePorCodigoActivacion_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ValidarPorClientePorCodigoActivacionResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_HabilitarAppAContactoCliente_InputMessage">
+    <wsdl:part name="parameters" element="tns:HabilitarAppAContactoCliente" />
+  </wsdl:message>
+  <wsdl:message name="IService1_HabilitarAppAContactoCliente_OutputMessage">
+    <wsdl:part name="parameters" element="tns:HabilitarAppAContactoClienteResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_RegistrarMensajeDesdeUsuarioHaciaCliente_InputMessage">
+    <wsdl:part name="parameters" element="tns:RegistrarMensajeDesdeUsuarioHaciaCliente" />
+  </wsdl:message>
+  <wsdl:message name="IService1_RegistrarMensajeDesdeUsuarioHaciaCliente_OutputMessage">
+    <wsdl:part name="parameters" element="tns:RegistrarMensajeDesdeUsuarioHaciaClienteResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_RegistrarMensajeDesdeClienteHaciaUsuario_InputMessage">
+    <wsdl:part name="parameters" element="tns:RegistrarMensajeDesdeClienteHaciaUsuario" />
+  </wsdl:message>
+  <wsdl:message name="IService1_RegistrarMensajeDesdeClienteHaciaUsuario_OutputMessage">
+    <wsdl:part name="parameters" element="tns:RegistrarMensajeDesdeClienteHaciaUsuarioResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_ListarMensajes_InputMessage">
+    <wsdl:part name="parameters" element="tns:ListarMensajes" />
+  </wsdl:message>
+  <wsdl:message name="IService1_ListarMensajes_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ListarMensajesResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_registrarIngreso_InputMessage">
+    <wsdl:part name="parameters" element="tns:registrarIngreso" />
+  </wsdl:message>
+  <wsdl:message name="IService1_registrarIngreso_OutputMessage">
+    <wsdl:part name="parameters" element="tns:registrarIngresoResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_registrarCarga_InputMessage">
+    <wsdl:part name="parameters" element="tns:registrarCarga" />
+  </wsdl:message>
+  <wsdl:message name="IService1_registrarCarga_OutputMessage">
+    <wsdl:part name="parameters" element="tns:registrarCargaResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_registrarSalida_InputMessage">
+    <wsdl:part name="parameters" element="tns:registrarSalida" />
+  </wsdl:message>
+  <wsdl:message name="IService1_registrarSalida_OutputMessage">
+    <wsdl:part name="parameters" element="tns:registrarSalidaResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_registrarInicioStandByPorCodEntrega_InputMessage">
+    <wsdl:part name="parameters" element="tns:registrarInicioStandByPorCodEntrega" />
+  </wsdl:message>
+  <wsdl:message name="IService1_registrarInicioStandByPorCodEntrega_OutputMessage">
+    <wsdl:part name="parameters" element="tns:registrarInicioStandByPorCodEntregaResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_registrarFinStandByPorCodEntrega_InputMessage">
+    <wsdl:part name="parameters" element="tns:registrarFinStandByPorCodEntrega" />
+  </wsdl:message>
+  <wsdl:message name="IService1_registrarFinStandByPorCodEntrega_OutputMessage">
+    <wsdl:part name="parameters" element="tns:registrarFinStandByPorCodEntregaResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_registrarInicioDescargaPorCodEntrega_InputMessage">
+    <wsdl:part name="parameters" element="tns:registrarInicioDescargaPorCodEntrega" />
+  </wsdl:message>
+  <wsdl:message name="IService1_registrarInicioDescargaPorCodEntrega_OutputMessage">
+    <wsdl:part name="parameters" element="tns:registrarInicioDescargaPorCodEntregaResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_registrarEntregaPorCodEntrega_InputMessage">
+    <wsdl:part name="parameters" element="tns:registrarEntregaPorCodEntrega" />
+  </wsdl:message>
+  <wsdl:message name="IService1_registrarEntregaPorCodEntrega_OutputMessage">
+    <wsdl:part name="parameters" element="tns:registrarEntregaPorCodEntregaResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_ObtenerEntregaPorGuiaLegal_InputMessage">
+    <wsdl:part name="parameters" element="tns:ObtenerEntregaPorGuiaLegal" />
+  </wsdl:message>
+  <wsdl:message name="IService1_ObtenerEntregaPorGuiaLegal_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ObtenerEntregaPorGuiaLegalResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_listaEstadosPorEntrega_InputMessage">
+    <wsdl:part name="parameters" element="tns:listaEstadosPorEntrega" />
+  </wsdl:message>
+  <wsdl:message name="IService1_listaEstadosPorEntrega_OutputMessage">
+    <wsdl:part name="parameters" element="tns:listaEstadosPorEntregaResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_listarCargaEntregaPorEstado_InputMessage">
+    <wsdl:part name="parameters" element="tns:listarCargaEntregaPorEstado" />
+  </wsdl:message>
+  <wsdl:message name="IService1_listarCargaEntregaPorEstado_OutputMessage">
+    <wsdl:part name="parameters" element="tns:listarCargaEntregaPorEstadoResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_listarNotificacionPushApp_InputMessage">
+    <wsdl:part name="parameters" element="tns:listarNotificacionPushApp" />
+  </wsdl:message>
+  <wsdl:message name="IService1_listarNotificacionPushApp_OutputMessage">
+    <wsdl:part name="parameters" element="tns:listarNotificacionPushAppResponse" />
+  </wsdl:message>
+  <wsdl:portType name="IService1">
+    <wsdl:operation name="GetData">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/GetData" message="tns:IService1_GetData_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/GetDataResponse" message="tns:IService1_GetData_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetDataUsingDataContract">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/GetDataUsingDataContract" message="tns:IService1_GetDataUsingDataContract_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/GetDataUsingDataContractResponse" message="tns:IService1_GetDataUsingDataContract_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="accesoLoginCliente">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/accesoLoginCliente" message="tns:IService1_accesoLoginCliente_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/accesoLoginClienteResponse" message="tns:IService1_accesoLoginCliente_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="obtenerDataHomeAppCliente">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/obtenerDataHomeAppCliente" message="tns:IService1_obtenerDataHomeAppCliente_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/obtenerDataHomeAppClienteResponse" message="tns:IService1_obtenerDataHomeAppCliente_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="obtenerItemTabla">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/obtenerItemTabla" message="tns:IService1_obtenerItemTabla_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/obtenerItemTablaResponse" message="tns:IService1_obtenerItemTabla_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="obtenerDataComercial">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/obtenerDataComercial" message="tns:IService1_obtenerDataComercial_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/obtenerDataComercialResponse" message="tns:IService1_obtenerDataComercial_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="registrarRequerimiento">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/registrarRequerimiento" message="tns:IService1_registrarRequerimiento_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/registrarRequerimientoResponse" message="tns:IService1_registrarRequerimiento_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="listarRequerimiento">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/listarRequerimiento" message="tns:IService1_listarRequerimiento_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/listarRequerimientoResponse" message="tns:IService1_listarRequerimiento_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="obtenerRequerimiento">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/obtenerRequerimiento" message="tns:IService1_obtenerRequerimiento_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/obtenerRequerimientoResponse" message="tns:IService1_obtenerRequerimiento_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="consultarClienteSAP">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/consultarClienteSAP" message="tns:IService1_consultarClienteSAP_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/consultarClienteSAPResponse" message="tns:IService1_consultarClienteSAP_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="listarEvento">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/listarEvento" message="tns:IService1_listarEvento_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/listarEventoResponse" message="tns:IService1_listarEvento_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CreaActualizarContactoEvento">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/CreaActualizarContactoEvento" message="tns:IService1_CreaActualizarContactoEvento_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/CreaActualizarContactoEventoResponse" message="tns:IService1_CreaActualizarContactoEvento_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CrearActualizarEvento">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/CrearActualizarEvento" message="tns:IService1_CrearActualizarEvento_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/CrearActualizarEventoResponse" message="tns:IService1_CrearActualizarEvento_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="consultarCuentaCorriente">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/consultarCuentaCorriente" message="tns:IService1_consultarCuentaCorriente_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/consultarCuentaCorrienteResponse" message="tns:IService1_consultarCuentaCorriente_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="consultarDocumentoFactura">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/consultarDocumentoFactura" message="tns:IService1_consultarDocumentoFactura_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/consultarDocumentoFacturaResponse" message="tns:IService1_consultarDocumentoFactura_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="obtenerTransportista">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/obtenerTransportista" message="tns:IService1_obtenerTransportista_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/obtenerTransportistaResponse" message="tns:IService1_obtenerTransportista_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AgregarTransportista">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/AgregarTransportista" message="tns:IService1_AgregarTransportista_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/AgregarTransportistaResponse" message="tns:IService1_AgregarTransportista_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ListarPaises">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/ListarPaises" message="tns:IService1_ListarPaises_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/ListarPaisesResponse" message="tns:IService1_ListarPaises_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ListarDepartamentos">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/ListarDepartamentos" message="tns:IService1_ListarDepartamentos_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/ListarDepartamentosResponse" message="tns:IService1_ListarDepartamentos_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ListarDistrito">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/ListarDistrito" message="tns:IService1_ListarDistrito_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/ListarDistritoResponse" message="tns:IService1_ListarDistrito_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ListarProvincias">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/ListarProvincias" message="tns:IService1_ListarProvincias_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/ListarProvinciasResponse" message="tns:IService1_ListarProvincias_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerUnidadTransportista">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/ObtenerUnidadTransportista" message="tns:IService1_ObtenerUnidadTransportista_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/ObtenerUnidadTransportistaResponse" message="tns:IService1_ObtenerUnidadTransportista_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AgregarUnidadTransportista">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/AgregarUnidadTransportista" message="tns:IService1_AgregarUnidadTransportista_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/AgregarUnidadTransportistaResponse" message="tns:IService1_AgregarUnidadTransportista_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerTiposUnidad">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/ObtenerTiposUnidad" message="tns:IService1_ObtenerTiposUnidad_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/ObtenerTiposUnidadResponse" message="tns:IService1_ObtenerTiposUnidad_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="postImage">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/postImage" message="tns:IService1_postImage_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/postImageResponse" message="tns:IService1_postImage_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="registrarRequerimientoImg">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/registrarRequerimientoImg" message="tns:IService1_registrarRequerimientoImg_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/registrarRequerimientoImgResponse" message="tns:IService1_registrarRequerimientoImg_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="agregarAdjuntoRequerimiento">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/agregarAdjuntoRequerimiento" message="tns:IService1_agregarAdjuntoRequerimiento_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/agregarAdjuntoRequerimientoResponse" message="tns:IService1_agregarAdjuntoRequerimiento_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="guardaModificaScoring">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/guardaModificaScoring" message="tns:IService1_guardaModificaScoring_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/guardaModificaScoringResponse" message="tns:IService1_guardaModificaScoring_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="consultarEntregaPedido">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/consultarEntregaPedido" message="tns:IService1_consultarEntregaPedido_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/consultarEntregaPedidoResponse" message="tns:IService1_consultarEntregaPedido_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ListarEstadosByEntregaByPedido">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/ListarEstadosByEntregaByPedido" message="tns:IService1_ListarEstadosByEntregaByPedido_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/ListarEstadosByEntregaByPedidoResponse" message="tns:IService1_ListarEstadosByEntregaByPedido_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="pedidosbyIdClientesBDOE">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/pedidosbyIdClientesBDOE" message="tns:IService1_pedidosbyIdClientesBDOE_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/pedidosbyIdClientesBDOEResponse" message="tns:IService1_pedidosbyIdClientesBDOE_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="enviarCertificadoCorreo">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/enviarCertificadoCorreo" message="tns:IService1_enviarCertificadoCorreo_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/enviarCertificadoCorreoResponse" message="tns:IService1_enviarCertificadoCorreo_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="obtenerDatosTracking">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/obtenerDatosTracking" message="tns:IService1_obtenerDatosTracking_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/obtenerDatosTrackingResponse" message="tns:IService1_obtenerDatosTracking_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ingresarCertificadoCalidad">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/ingresarCertificadoCalidad" message="tns:IService1_ingresarCertificadoCalidad_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/ingresarCertificadoCalidadResponse" message="tns:IService1_ingresarCertificadoCalidad_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ClienteExisteEnSap">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/ClienteExisteEnSap" message="tns:IService1_ClienteExisteEnSap_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/ClienteExisteEnSapResponse" message="tns:IService1_ClienteExisteEnSap_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="RegistrarContactoClienteDesdeCliente">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/RegistrarContactoClienteDesdeCliente" message="tns:IService1_RegistrarContactoClienteDesdeCliente_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/RegistrarContactoClienteDesdeClienteResponse" message="tns:IService1_RegistrarContactoClienteDesdeCliente_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ValidarPorClientePorCodigoActivacion">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/ValidarPorClientePorCodigoActivacion" message="tns:IService1_ValidarPorClientePorCodigoActivacion_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/ValidarPorClientePorCodigoActivacionResponse" message="tns:IService1_ValidarPorClientePorCodigoActivacion_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="HabilitarAppAContactoCliente">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/HabilitarAppAContactoCliente" message="tns:IService1_HabilitarAppAContactoCliente_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/HabilitarAppAContactoClienteResponse" message="tns:IService1_HabilitarAppAContactoCliente_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="RegistrarMensajeDesdeUsuarioHaciaCliente">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/RegistrarMensajeDesdeUsuarioHaciaCliente" message="tns:IService1_RegistrarMensajeDesdeUsuarioHaciaCliente_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/RegistrarMensajeDesdeUsuarioHaciaClienteResponse" message="tns:IService1_RegistrarMensajeDesdeUsuarioHaciaCliente_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="RegistrarMensajeDesdeClienteHaciaUsuario">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/RegistrarMensajeDesdeClienteHaciaUsuario" message="tns:IService1_RegistrarMensajeDesdeClienteHaciaUsuario_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/RegistrarMensajeDesdeClienteHaciaUsuarioResponse" message="tns:IService1_RegistrarMensajeDesdeClienteHaciaUsuario_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ListarMensajes">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/ListarMensajes" message="tns:IService1_ListarMensajes_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/ListarMensajesResponse" message="tns:IService1_ListarMensajes_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="registrarIngreso">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/registrarIngreso" message="tns:IService1_registrarIngreso_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/registrarIngresoResponse" message="tns:IService1_registrarIngreso_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="registrarCarga">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/registrarCarga" message="tns:IService1_registrarCarga_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/registrarCargaResponse" message="tns:IService1_registrarCarga_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="registrarSalida">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/registrarSalida" message="tns:IService1_registrarSalida_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/registrarSalidaResponse" message="tns:IService1_registrarSalida_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="registrarInicioStandByPorCodEntrega">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/registrarInicioStandByPorCodEntrega" message="tns:IService1_registrarInicioStandByPorCodEntrega_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/registrarInicioStandByPorCodEntregaResponse" message="tns:IService1_registrarInicioStandByPorCodEntrega_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="registrarFinStandByPorCodEntrega">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/registrarFinStandByPorCodEntrega" message="tns:IService1_registrarFinStandByPorCodEntrega_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/registrarFinStandByPorCodEntregaResponse" message="tns:IService1_registrarFinStandByPorCodEntrega_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="registrarInicioDescargaPorCodEntrega">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/registrarInicioDescargaPorCodEntrega" message="tns:IService1_registrarInicioDescargaPorCodEntrega_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/registrarInicioDescargaPorCodEntregaResponse" message="tns:IService1_registrarInicioDescargaPorCodEntrega_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="registrarEntregaPorCodEntrega">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/registrarEntregaPorCodEntrega" message="tns:IService1_registrarEntregaPorCodEntrega_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/registrarEntregaPorCodEntregaResponse" message="tns:IService1_registrarEntregaPorCodEntrega_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerEntregaPorGuiaLegal">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/ObtenerEntregaPorGuiaLegal" message="tns:IService1_ObtenerEntregaPorGuiaLegal_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/ObtenerEntregaPorGuiaLegalResponse" message="tns:IService1_ObtenerEntregaPorGuiaLegal_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="listaEstadosPorEntrega">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/listaEstadosPorEntrega" message="tns:IService1_listaEstadosPorEntrega_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/listaEstadosPorEntregaResponse" message="tns:IService1_listaEstadosPorEntrega_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="listarCargaEntregaPorEstado">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/listarCargaEntregaPorEstado" message="tns:IService1_listarCargaEntregaPorEstado_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/listarCargaEntregaPorEstadoResponse" message="tns:IService1_listarCargaEntregaPorEstado_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="listarNotificacionPushApp">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/listarNotificacionPushApp" message="tns:IService1_listarNotificacionPushApp_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/listarNotificacionPushAppResponse" message="tns:IService1_listarNotificacionPushApp_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:service name="Service1" />
+</wsdl:definitions>

@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/Voxiva.TDMDigitalBE.Servicios.SAPServiceReference" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/Voxiva.TDMDigitalBE.Servicios.SAPServiceReference" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://tdmdigitalqa.azurewebsites.net/Service1.svc?xsd=xsd6" namespace="http://schemas.datacontract.org/2004/07/System.ComponentModel" />
+  <xs:complexType name="Z_SD_CONSULTA_CLIENTEResponse">
+    <xs:sequence>
+      <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/System.ComponentModel" name="PropertyChanged" nillable="true" type="q1:PropertyChangedEventHandler" />
+      <xs:element name="cREDITOSField" nillable="true" type="tns:ZSSD_CREDITOS" />
+      <xs:element name="gENERALESField" nillable="true" type="tns:ZSSD_GENERALES" />
+      <xs:element name="mENSAJESField" nillable="true" type="tns:ArrayOfZSSD_MSJE" />
+      <xs:element name="t_CAB_PEDField" nillable="true" type="tns:ArrayOfZES_PEDIDOS" />
+      <xs:element name="t_DET_PEDField" nillable="true" type="tns:ArrayOfZES_DET_PEDIDOS" />
+      <xs:element name="t_FACTURASField" nillable="true" type="tns:ArrayOfZSSD_FACTURAS" />
+      <xs:element name="vERIFICA_CLIENTEField" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Z_SD_CONSULTA_CLIENTEResponse" nillable="true" type="tns:Z_SD_CONSULTA_CLIENTEResponse" />
+  <xs:complexType name="ZSSD_CREDITOS">
+    <xs:sequence>
+      <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/System.ComponentModel" name="PropertyChanged" nillable="true" type="q2:PropertyChangedEventHandler" />
+      <xs:element name="aGOTAMIENTOField" type="xs:int" />
+      <xs:element name="cOND_PAGOField" nillable="true" type="xs:string" />
+      <xs:element name="cRED_CONSField" type="xs:decimal" />
+      <xs:element name="cRED_DISPField" type="xs:decimal" />
+      <xs:element name="cRED_TOTALField" type="xs:decimal" />
+      <xs:element name="dESC_CONDField" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ZSSD_CREDITOS" nillable="true" type="tns:ZSSD_CREDITOS" />
+  <xs:complexType name="ZSSD_GENERALES">
+    <xs:sequence>
+      <xs:element xmlns:q3="http://schemas.datacontract.org/2004/07/System.ComponentModel" name="PropertyChanged" nillable="true" type="q3:PropertyChangedEventHandler" />
+      <xs:element name="cLASE_CLIENTEField" nillable="true" type="xs:string" />
+      <xs:element name="cOD_CLIENTEField" nillable="true" type="xs:string" />
+      <xs:element name="cOD_POSTALField" nillable="true" type="xs:string" />
+      <xs:element name="dESC_CLASEField" nillable="true" type="xs:string" />
+      <xs:element name="dESC_NIFField" nillable="true" type="xs:string" />
+      <xs:element name="dESC_RAMOField" nillable="true" type="xs:string" />
+      <xs:element name="dIRECCIONField" nillable="true" type="xs:string" />
+      <xs:element name="dISTRITOField" nillable="true" type="xs:string" />
+      <xs:element name="eMAILField" nillable="true" type="xs:string" />
+      <xs:element name="nIFField" nillable="true" type="xs:string" />
+      <xs:element name="nOMB1Field" nillable="true" type="xs:string" />
+      <xs:element name="nOMB2Field" nillable="true" type="xs:string" />
+      <xs:element name="pAISField" nillable="true" type="xs:string" />
+      <xs:element name="pOBLACIONField" nillable="true" type="xs:string" />
+      <xs:element name="rAMOField" nillable="true" type="xs:string" />
+      <xs:element name="rEGIONField" nillable="true" type="xs:string" />
+      <xs:element name="tELEFONOField" nillable="true" type="xs:string" />
+      <xs:element name="tEL_MOVILField" nillable="true" type="xs:string" />
+      <xs:element name="tIPO_NIFField" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ZSSD_GENERALES" nillable="true" type="tns:ZSSD_GENERALES" />
+  <xs:complexType name="ArrayOfZSSD_MSJE">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="ZSSD_MSJE" nillable="true" type="tns:ZSSD_MSJE" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfZSSD_MSJE" nillable="true" type="tns:ArrayOfZSSD_MSJE" />
+  <xs:complexType name="ZSSD_MSJE">
+    <xs:sequence>
+      <xs:element xmlns:q4="http://schemas.datacontract.org/2004/07/System.ComponentModel" name="PropertyChanged" nillable="true" type="q4:PropertyChangedEventHandler" />
+      <xs:element name="mESSAGEField" nillable="true" type="xs:string" />
+      <xs:element name="tYPEField" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ZSSD_MSJE" nillable="true" type="tns:ZSSD_MSJE" />
+  <xs:complexType name="ArrayOfZES_PEDIDOS">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="ZES_PEDIDOS" nillable="true" type="tns:ZES_PEDIDOS" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfZES_PEDIDOS" nillable="true" type="tns:ArrayOfZES_PEDIDOS" />
+  <xs:complexType name="ZES_PEDIDOS">
+    <xs:sequence>
+      <xs:element xmlns:q5="http://schemas.datacontract.org/2004/07/System.ComponentModel" name="PropertyChanged" nillable="true" type="q5:PropertyChangedEventHandler" />
+      <xs:element name="cOND_EXPField" nillable="true" type="xs:string" />
+      <xs:element name="dESC_COND_EXPField" nillable="true" type="xs:string" />
+      <xs:element name="dESC_EST_ENTField" nillable="true" type="xs:string" />
+      <xs:element name="dESC_EST_PEDField" nillable="true" type="xs:string" />
+      <xs:element name="eNTREGAField" nillable="true" type="xs:string" />
+      <xs:element name="eSTADO_ENTREGAField" nillable="true" type="xs:string" />
+      <xs:element name="eSTADO_PEDIDOField" nillable="true" type="xs:string" />
+      <xs:element name="fECHA_CARGAField" nillable="true" type="xs:string" />
+      <xs:element name="fECHA_CREACIONField" nillable="true" type="xs:string" />
+      <xs:element name="fECHA_ENTREGAField" nillable="true" type="xs:string" />
+      <xs:element name="fECHA_GUIAField" nillable="true" type="xs:string" />
+      <xs:element name="fECHA_PEDIDOField" nillable="true" type="xs:string" />
+      <xs:element name="fECHA_RECOGEField" nillable="true" type="xs:string" />
+      <xs:element name="gUIA_LEGALField" nillable="true" type="xs:string" />
+      <xs:element name="hORA_ENTREGAField" type="xs:dateTime" />
+      <xs:element name="lUGAR_ENTREGAField" nillable="true" type="xs:string" />
+      <xs:element name="nUMERO_GUIAField" nillable="true" type="xs:string" />
+      <xs:element name="oPORTUNIDADField" nillable="true" type="xs:string" />
+      <xs:element name="pEDIDO_CLIENTEField" nillable="true" type="xs:string" />
+      <xs:element name="pEDIDO_VENTAField" nillable="true" type="xs:string" />
+      <xs:element name="uSUARIO_ENTREGAField" nillable="true" type="xs:string" />
+      <xs:element name="uSUARIO_PEDIDOField" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ZES_PEDIDOS" nillable="true" type="tns:ZES_PEDIDOS" />
+  <xs:complexType name="ArrayOfZES_DET_PEDIDOS">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="ZES_DET_PEDIDOS" nillable="true" type="tns:ZES_DET_PEDIDOS" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfZES_DET_PEDIDOS" nillable="true" type="tns:ArrayOfZES_DET_PEDIDOS" />
+  <xs:complexType name="ZES_DET_PEDIDOS">
+    <xs:sequence>
+      <xs:element xmlns:q6="http://schemas.datacontract.org/2004/07/System.ComponentModel" name="PropertyChanged" nillable="true" type="q6:PropertyChangedEventHandler" />
+      <xs:element name="cANTIDADField" type="xs:decimal" />
+      <xs:element name="cOD_PRODUCTOField" nillable="true" type="xs:string" />
+      <xs:element name="eNTREGAField" nillable="true" type="xs:string" />
+      <xs:element name="lOTEField" nillable="true" type="xs:string" />
+      <xs:element name="nOMB_PRODUCTOField" nillable="true" type="xs:string" />
+      <xs:element name="ocField" nillable="true" type="xs:string" />
+      <xs:element name="pOS_ENTREGAField" nillable="true" type="xs:string" />
+      <xs:element name="sUJETO_LOTEField" nillable="true" type="xs:string" />
+      <xs:element name="uM_BASEField" nillable="true" type="xs:string" />
+      <xs:element name="uM_VENTAField" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ZES_DET_PEDIDOS" nillable="true" type="tns:ZES_DET_PEDIDOS" />
+  <xs:complexType name="ArrayOfZSSD_FACTURAS">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="ZSSD_FACTURAS" nillable="true" type="tns:ZSSD_FACTURAS" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfZSSD_FACTURAS" nillable="true" type="tns:ArrayOfZSSD_FACTURAS" />
+  <xs:complexType name="ZSSD_FACTURAS">
+    <xs:sequence>
+      <xs:element xmlns:q7="http://schemas.datacontract.org/2004/07/System.ComponentModel" name="PropertyChanged" nillable="true" type="q7:PropertyChangedEventHandler" />
+      <xs:element name="cOND_PAGOField" nillable="true" type="xs:string" />
+      <xs:element name="dESC_CONDField" nillable="true" type="xs:string" />
+      <xs:element name="fACTURAField" nillable="true" type="xs:string" />
+      <xs:element name="fECHA_EMISIONField" nillable="true" type="xs:string" />
+      <xs:element name="fECHA_VENCField" nillable="true" type="xs:string" />
+      <xs:element name="gUIAField" nillable="true" type="xs:string" />
+      <xs:element name="mONEDAField" nillable="true" type="xs:string" />
+      <xs:element name="mONTO_CIGVField" type="xs:decimal" />
+      <xs:element name="mONTO_NCField" type="xs:decimal" />
+      <xs:element name="mONTO_NDField" type="xs:decimal" />
+      <xs:element name="mONTO_SIGVField" type="xs:decimal" />
+      <xs:element name="pEDIDOField" nillable="true" type="xs:string" />
+      <xs:element name="rEFERENCIAField" nillable="true" type="xs:string" />
+      <xs:element name="sTATUSField" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ZSSD_FACTURAS" nillable="true" type="tns:ZSSD_FACTURAS" />
+</xs:schema>

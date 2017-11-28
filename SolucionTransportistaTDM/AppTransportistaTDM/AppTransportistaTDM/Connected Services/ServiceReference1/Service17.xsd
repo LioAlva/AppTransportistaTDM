@@ -1,0 +1,1107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/Voxiva.TDMDigitalBE.Modelo.DTO" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/Voxiva.TDMDigitalBE.Modelo.DTO" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://tdmdigitalqa.azurewebsites.net/Service1.svc?xsd=xsd4" namespace="http://schemas.datacontract.org/2004/07/Voxiva.TDMDigitalBE.Modelo.Domain" />
+  <xs:import schemaLocation="http://tdmdigitalqa.azurewebsites.net/Service1.svc?xsd=xsd5" namespace="http://schemas.datacontract.org/2004/07/Voxiva.TDMDigitalBE.Servicios.SAPServiceReference" />
+  <xs:import schemaLocation="http://tdmdigitalqa.azurewebsites.net/Service1.svc?xsd=xsd8" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+  <xs:import schemaLocation="http://tdmdigitalqa.azurewebsites.net/Service1.svc?xsd=xsd10" namespace="http://schemas.datacontract.org/2004/07/Voxiva.TDMDigitalBE.Modelo.Clases" />
+  <xs:complexType name="MobileResponseOfMobileLoginLBPOpb6l">
+    <xs:annotation>
+      <xs:appinfo>
+        <GenericType Name="MobileResponseOf{0}{#}" Namespace="http://schemas.datacontract.org/2004/07/Voxiva.TDMDigitalBE.Modelo.DTO" xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+          <GenericParameter Name="MobileLogin" Namespace="http://schemas.datacontract.org/2004/07/Voxiva.TDMDigitalBE.Modelo.DTO" />
+        </GenericType>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element minOccurs="0" name="data" nillable="true" type="tns:MobileLogin" />
+      <xs:element minOccurs="0" name="message" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="status" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="MobileResponseOfMobileLoginLBPOpb6l" nillable="true" type="tns:MobileResponseOfMobileLoginLBPOpb6l" />
+  <xs:complexType name="MobileLogin">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="idUsuario" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="MobileLogin" nillable="true" type="tns:MobileLogin" />
+  <xs:complexType name="MobileResponseOfMobileHomeDataAppClienteLBPOpb6l">
+    <xs:annotation>
+      <xs:appinfo>
+        <GenericType Name="MobileResponseOf{0}{#}" Namespace="http://schemas.datacontract.org/2004/07/Voxiva.TDMDigitalBE.Modelo.DTO" xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+          <GenericParameter Name="MobileHomeDataAppCliente" Namespace="http://schemas.datacontract.org/2004/07/Voxiva.TDMDigitalBE.Modelo.DTO" />
+        </GenericType>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element minOccurs="0" name="data" nillable="true" type="tns:MobileHomeDataAppCliente" />
+      <xs:element minOccurs="0" name="message" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="status" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="MobileResponseOfMobileHomeDataAppClienteLBPOpb6l" nillable="true" type="tns:MobileResponseOfMobileHomeDataAppClienteLBPOpb6l" />
+  <xs:complexType name="MobileHomeDataAppCliente">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="cliente" nillable="true" type="tns:ContactoClienteDTO" />
+      <xs:element minOccurs="0" name="listaMensaje" nillable="true" type="tns:ArrayOfNotificacionDTO" />
+      <xs:element minOccurs="0" name="listaRequerimiento" nillable="true" type="tns:ArrayOfRequerimientoDTO" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="MobileHomeDataAppCliente" nillable="true" type="tns:MobileHomeDataAppCliente" />
+  <xs:complexType name="ContactoClienteDTO">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="cliente_nombre" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="cliente_nroDocumento" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="contactocliente_claveContactoCliente" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="contactocliente_codigoActivacion" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="contactocliente_email" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="contactocliente_estado" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="contactocliente_idCliente" type="xs:int" />
+      <xs:element minOccurs="0" name="contactocliente_nombre" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="contactocliente_nroDocumento" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="contactocliente_telefono" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="contactocliente_verEntregas" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="contactocliente_verFinanzas" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="idContactoCliente" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ContactoClienteDTO" nillable="true" type="tns:ContactoClienteDTO" />
+  <xs:complexType name="ArrayOfNotificacionDTO">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="NotificacionDTO" nillable="true" type="tns:NotificacionDTO" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfNotificacionDTO" nillable="true" type="tns:ArrayOfNotificacionDTO" />
+  <xs:complexType name="NotificacionDTO">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="IdRequerimiento" type="xs:int" />
+      <xs:element minOccurs="0" name="asunto" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="cliente_RazonSocial" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="contactoCliente_Nombre" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="estado" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="fechaHora" nillable="true" type="xs:long" />
+      <xs:element minOccurs="0" name="idContactoCliente" type="xs:int" />
+      <xs:element minOccurs="0" name="idNotificacion" type="xs:int" />
+      <xs:element minOccurs="0" name="idUsuario" type="xs:int" />
+      <xs:element minOccurs="0" name="mensaje" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="tipo" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="url" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="usuario_Nombre1" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="NotificacionDTO" nillable="true" type="tns:NotificacionDTO" />
+  <xs:complexType name="ArrayOfRequerimientoDTO">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="RequerimientoDTO" nillable="true" type="tns:RequerimientoDTO" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfRequerimientoDTO" nillable="true" type="tns:ArrayOfRequerimientoDTO" />
+  <xs:complexType name="RequerimientoDTO">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="cliente_RazonSocial" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="contactocliente_Email" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="contactocliente_Nombre" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="contactocliente_Telefono1" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="descripcionEstado" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="estado" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="fechaIngreso" type="xs:long" />
+      <xs:element minOccurs="0" name="historialRequerimiento" nillable="true" type="tns:ArrayOfHistorialRequerimientoDTO" />
+      <xs:element minOccurs="0" name="idContactoCliente" type="xs:int" />
+      <xs:element minOccurs="0" name="idRequerimiento" type="xs:int" />
+      <xs:element minOccurs="0" name="idUsuario" type="xs:int" />
+      <xs:element minOccurs="0" name="multimedias" nillable="true" type="tns:ArrayOfRequerimientoMultimediaDTO" />
+      <xs:element minOccurs="0" name="permisosUser" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="proyecto_Descripcion" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="proyecto_IdProyecto" type="xs:int" />
+      <xs:element minOccurs="0" name="proyecto_Nombre" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="req_IdDepartamento" type="xs:int" />
+      <xs:element minOccurs="0" name="req_IdSector" type="xs:int" />
+      <xs:element minOccurs="0" name="scoring" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="sector_NombreSector" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ticket" type="xs:int" />
+      <xs:element minOccurs="0" name="tiempoRestanteEnHoras" type="xs:int" />
+      <xs:element minOccurs="0" name="urlFotoUsuario" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="usuario_Email" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="usuario_Nombre1" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="usuario_Telefono" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="RequerimientoDTO" nillable="true" type="tns:RequerimientoDTO" />
+  <xs:complexType name="ArrayOfHistorialRequerimientoDTO">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="HistorialRequerimientoDTO" nillable="true" type="tns:HistorialRequerimientoDTO" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfHistorialRequerimientoDTO" nillable="true" type="tns:ArrayOfHistorialRequerimientoDTO" />
+  <xs:complexType name="HistorialRequerimientoDTO">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="accion" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="descripcionAccion" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="fechaHora" type="xs:long" />
+      <xs:element minOccurs="0" name="idHistorialRequerimiento" type="xs:int" />
+      <xs:element minOccurs="0" name="idRequerimiento" type="xs:int" />
+      <xs:element minOccurs="0" name="idUsuario" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="usuario_Nombre1" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="HistorialRequerimientoDTO" nillable="true" type="tns:HistorialRequerimientoDTO" />
+  <xs:complexType name="ArrayOfRequerimientoMultimediaDTO">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="RequerimientoMultimediaDTO" nillable="true" type="tns:RequerimientoMultimediaDTO" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfRequerimientoMultimediaDTO" nillable="true" type="tns:ArrayOfRequerimientoMultimediaDTO" />
+  <xs:complexType name="RequerimientoMultimediaDTO">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="descripcion" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="estado" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="extension" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="idRequerimiento" type="xs:int" />
+      <xs:element minOccurs="0" name="nombre" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="urlMultimedia" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="RequerimientoMultimediaDTO" nillable="true" type="tns:RequerimientoMultimediaDTO" />
+  <xs:complexType name="MobileResponseOfMobileConsultaItemTablaLBPOpb6l">
+    <xs:annotation>
+      <xs:appinfo>
+        <GenericType Name="MobileResponseOf{0}{#}" Namespace="http://schemas.datacontract.org/2004/07/Voxiva.TDMDigitalBE.Modelo.DTO" xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+          <GenericParameter Name="MobileConsultaItemTabla" Namespace="http://schemas.datacontract.org/2004/07/Voxiva.TDMDigitalBE.Modelo.DTO" />
+        </GenericType>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element minOccurs="0" name="data" nillable="true" type="tns:MobileConsultaItemTabla" />
+      <xs:element minOccurs="0" name="message" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="status" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="MobileResponseOfMobileConsultaItemTablaLBPOpb6l" nillable="true" type="tns:MobileResponseOfMobileConsultaItemTablaLBPOpb6l" />
+  <xs:complexType name="MobileConsultaItemTabla">
+    <xs:sequence>
+      <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/Voxiva.TDMDigitalBE.Modelo.Domain" minOccurs="0" name="listaItemTabla" nillable="true" type="q1:ArrayOfItemtabla" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="MobileConsultaItemTabla" nillable="true" type="tns:MobileConsultaItemTabla" />
+  <xs:complexType name="MobileResponseOfMobileDataComercialLBPOpb6l">
+    <xs:annotation>
+      <xs:appinfo>
+        <GenericType Name="MobileResponseOf{0}{#}" Namespace="http://schemas.datacontract.org/2004/07/Voxiva.TDMDigitalBE.Modelo.DTO" xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+          <GenericParameter Name="MobileDataComercial" Namespace="http://schemas.datacontract.org/2004/07/Voxiva.TDMDigitalBE.Modelo.DTO" />
+        </GenericType>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element minOccurs="0" name="data" nillable="true" type="tns:MobileDataComercial" />
+      <xs:element minOccurs="0" name="message" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="status" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="MobileResponseOfMobileDataComercialLBPOpb6l" nillable="true" type="tns:MobileResponseOfMobileDataComercialLBPOpb6l" />
+  <xs:complexType name="MobileDataComercial">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="cargo" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="direccion" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="distrito" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="email" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="idUsuario" type="xs:int" />
+      <xs:element minOccurs="0" name="imgUrl" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="nombre" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="pais" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="poblacion" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="telefono" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="telefonoMovil" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="MobileDataComercial" nillable="true" type="tns:MobileDataComercial" />
+  <xs:complexType name="MobileResponseOfMobileRequerimientoLBPOpb6l">
+    <xs:annotation>
+      <xs:appinfo>
+        <GenericType Name="MobileResponseOf{0}{#}" Namespace="http://schemas.datacontract.org/2004/07/Voxiva.TDMDigitalBE.Modelo.DTO" xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+          <GenericParameter Name="MobileRequerimiento" Namespace="http://schemas.datacontract.org/2004/07/Voxiva.TDMDigitalBE.Modelo.DTO" />
+        </GenericType>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element minOccurs="0" name="data" nillable="true" type="tns:MobileRequerimiento" />
+      <xs:element minOccurs="0" name="message" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="status" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="MobileResponseOfMobileRequerimientoLBPOpb6l" nillable="true" type="tns:MobileResponseOfMobileRequerimientoLBPOpb6l" />
+  <xs:complexType name="MobileRequerimiento">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="detalle" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="estado" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="fechaIngreso" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="idRequerimiento" type="xs:int" />
+      <xs:element minOccurs="0" name="nombreComercial" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="nombreProyecto" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ticket" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="MobileRequerimiento" nillable="true" type="tns:MobileRequerimiento" />
+  <xs:complexType name="MobileResponseOfMobileRequerimientoListLBPOpb6l">
+    <xs:annotation>
+      <xs:appinfo>
+        <GenericType Name="MobileResponseOf{0}{#}" Namespace="http://schemas.datacontract.org/2004/07/Voxiva.TDMDigitalBE.Modelo.DTO" xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+          <GenericParameter Name="MobileRequerimientoList" Namespace="http://schemas.datacontract.org/2004/07/Voxiva.TDMDigitalBE.Modelo.DTO" />
+        </GenericType>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element minOccurs="0" name="data" nillable="true" type="tns:MobileRequerimientoList" />
+      <xs:element minOccurs="0" name="message" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="status" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="MobileResponseOfMobileRequerimientoListLBPOpb6l" nillable="true" type="tns:MobileResponseOfMobileRequerimientoListLBPOpb6l" />
+  <xs:complexType name="MobileRequerimientoList">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="listaRequerimiento" nillable="true" type="tns:ArrayOfRequerimientoDTO" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="MobileRequerimientoList" nillable="true" type="tns:MobileRequerimientoList" />
+  <xs:complexType name="MobileResponseOfMobileRequerimientoDetalleLBPOpb6l">
+    <xs:annotation>
+      <xs:appinfo>
+        <GenericType Name="MobileResponseOf{0}{#}" Namespace="http://schemas.datacontract.org/2004/07/Voxiva.TDMDigitalBE.Modelo.DTO" xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+          <GenericParameter Name="MobileRequerimientoDetalle" Namespace="http://schemas.datacontract.org/2004/07/Voxiva.TDMDigitalBE.Modelo.DTO" />
+        </GenericType>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element minOccurs="0" name="data" nillable="true" type="tns:MobileRequerimientoDetalle" />
+      <xs:element minOccurs="0" name="message" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="status" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="MobileResponseOfMobileRequerimientoDetalleLBPOpb6l" nillable="true" type="tns:MobileResponseOfMobileRequerimientoDetalleLBPOpb6l" />
+  <xs:complexType name="MobileRequerimientoDetalle">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="requerimiento" nillable="true" type="tns:RequerimientoDTO" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="MobileRequerimientoDetalle" nillable="true" type="tns:MobileRequerimientoDetalle" />
+  <xs:complexType name="MobileResponseOfZ_SD_CONSULTA_CLIENTEResponseU6e2shzv">
+    <xs:annotation>
+      <xs:appinfo>
+        <GenericType Name="MobileResponseOf{0}{#}" Namespace="http://schemas.datacontract.org/2004/07/Voxiva.TDMDigitalBE.Modelo.DTO" xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+          <GenericParameter Name="Z_SD_CONSULTA_CLIENTEResponse" Namespace="http://schemas.datacontract.org/2004/07/Voxiva.TDMDigitalBE.Servicios.SAPServiceReference" />
+        </GenericType>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/Voxiva.TDMDigitalBE.Servicios.SAPServiceReference" minOccurs="0" name="data" nillable="true" type="q2:Z_SD_CONSULTA_CLIENTEResponse" />
+      <xs:element minOccurs="0" name="message" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="status" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="MobileResponseOfZ_SD_CONSULTA_CLIENTEResponseU6e2shzv" nillable="true" type="tns:MobileResponseOfZ_SD_CONSULTA_CLIENTEResponseU6e2shzv" />
+  <xs:complexType name="MobileResponseOfMobileEventoListLBPOpb6l">
+    <xs:annotation>
+      <xs:appinfo>
+        <GenericType Name="MobileResponseOf{0}{#}" Namespace="http://schemas.datacontract.org/2004/07/Voxiva.TDMDigitalBE.Modelo.DTO" xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+          <GenericParameter Name="MobileEventoList" Namespace="http://schemas.datacontract.org/2004/07/Voxiva.TDMDigitalBE.Modelo.DTO" />
+        </GenericType>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element minOccurs="0" name="data" nillable="true" type="tns:MobileEventoList" />
+      <xs:element minOccurs="0" name="message" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="status" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="MobileResponseOfMobileEventoListLBPOpb6l" nillable="true" type="tns:MobileResponseOfMobileEventoListLBPOpb6l" />
+  <xs:complexType name="MobileEventoList">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Evento" nillable="true" type="tns:ArrayOfEventoDTO" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="MobileEventoList" nillable="true" type="tns:MobileEventoList" />
+  <xs:complexType name="ArrayOfEventoDTO">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="EventoDTO" nillable="true" type="tns:EventoDTO" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfEventoDTO" nillable="true" type="tns:ArrayOfEventoDTO" />
+  <xs:complexType name="EventoDTO">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q3="http://schemas.datacontract.org/2004/07/Voxiva.TDMDigitalBE.Modelo.Domain" base="q3:Evento">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="inscrito" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="listaAsistentes" nillable="true" type="tns:ArrayOfRelacionAsistentesEventoDTO" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="EventoDTO" nillable="true" type="tns:EventoDTO" />
+  <xs:complexType name="ArrayOfRelacionAsistentesEventoDTO">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="RelacionAsistentesEventoDTO" nillable="true" type="tns:RelacionAsistentesEventoDTO" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfRelacionAsistentesEventoDTO" nillable="true" type="tns:ArrayOfRelacionAsistentesEventoDTO" />
+  <xs:complexType name="RelacionAsistentesEventoDTO">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Empresa" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="FechaInscripcion" type="xs:long" />
+      <xs:element minOccurs="0" name="Nombre" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="RelacionAsistentesEventoDTO" nillable="true" type="tns:RelacionAsistentesEventoDTO" />
+  <xs:complexType name="MobileResponseOfMobileContactoEventoLBPOpb6l">
+    <xs:annotation>
+      <xs:appinfo>
+        <GenericType Name="MobileResponseOf{0}{#}" Namespace="http://schemas.datacontract.org/2004/07/Voxiva.TDMDigitalBE.Modelo.DTO" xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+          <GenericParameter Name="MobileContactoEvento" Namespace="http://schemas.datacontract.org/2004/07/Voxiva.TDMDigitalBE.Modelo.DTO" />
+        </GenericType>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element minOccurs="0" name="data" nillable="true" type="tns:MobileContactoEvento" />
+      <xs:element minOccurs="0" name="message" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="status" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="MobileResponseOfMobileContactoEventoLBPOpb6l" nillable="true" type="tns:MobileResponseOfMobileContactoEventoLBPOpb6l" />
+  <xs:complexType name="MobileContactoEvento">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="mensaje" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="MobileContactoEvento" nillable="true" type="tns:MobileContactoEvento" />
+  <xs:complexType name="MobileResponseOfMobileCuentaCorrienteLBPOpb6l">
+    <xs:annotation>
+      <xs:appinfo>
+        <GenericType Name="MobileResponseOf{0}{#}" Namespace="http://schemas.datacontract.org/2004/07/Voxiva.TDMDigitalBE.Modelo.DTO" xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+          <GenericParameter Name="MobileCuentaCorriente" Namespace="http://schemas.datacontract.org/2004/07/Voxiva.TDMDigitalBE.Modelo.DTO" />
+        </GenericType>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element minOccurs="0" name="data" nillable="true" type="tns:MobileCuentaCorriente" />
+      <xs:element minOccurs="0" name="message" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="status" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="MobileResponseOfMobileCuentaCorrienteLBPOpb6l" nillable="true" type="tns:MobileResponseOfMobileCuentaCorrienteLBPOpb6l" />
+  <xs:complexType name="MobileCuentaCorriente">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="cuentaCorriente" nillable="true" type="tns:MobileCuentaCorrienteSAP" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="MobileCuentaCorriente" nillable="true" type="tns:MobileCuentaCorriente" />
+  <xs:complexType name="MobileCuentaCorrienteSAP">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="agotamiento" type="xs:int" />
+      <xs:element minOccurs="0" name="condicionPago" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="lineaAprobada" type="xs:decimal" />
+      <xs:element minOccurs="0" name="lineaTotal" type="xs:decimal" />
+      <xs:element minOccurs="0" name="lineaUtilizada" type="xs:decimal" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="MobileCuentaCorrienteSAP" nillable="true" type="tns:MobileCuentaCorrienteSAP" />
+  <xs:complexType name="MobileResponseOfMobileFacturaListLBPOpb6l">
+    <xs:annotation>
+      <xs:appinfo>
+        <GenericType Name="MobileResponseOf{0}{#}" Namespace="http://schemas.datacontract.org/2004/07/Voxiva.TDMDigitalBE.Modelo.DTO" xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+          <GenericParameter Name="MobileFacturaList" Namespace="http://schemas.datacontract.org/2004/07/Voxiva.TDMDigitalBE.Modelo.DTO" />
+        </GenericType>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element minOccurs="0" name="data" nillable="true" type="tns:MobileFacturaList" />
+      <xs:element minOccurs="0" name="message" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="status" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="MobileResponseOfMobileFacturaListLBPOpb6l" nillable="true" type="tns:MobileResponseOfMobileFacturaListLBPOpb6l" />
+  <xs:complexType name="MobileFacturaList">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="listaFactura" nillable="true" type="tns:ArrayOfMobileFacturaSAP" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="MobileFacturaList" nillable="true" type="tns:MobileFacturaList" />
+  <xs:complexType name="ArrayOfMobileFacturaSAP">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="MobileFacturaSAP" nillable="true" type="tns:MobileFacturaSAP" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfMobileFacturaSAP" nillable="true" type="tns:ArrayOfMobileFacturaSAP" />
+  <xs:complexType name="MobileFacturaSAP">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="condicionPago" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="descripcionCondicionPago" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="fechaEmision" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="fechaVencimiento" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="moneda" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="montoCIGV" type="xs:decimal" />
+      <xs:element minOccurs="0" name="montoNC" type="xs:decimal" />
+      <xs:element minOccurs="0" name="montoND" type="xs:decimal" />
+      <xs:element minOccurs="0" name="montoSIGV" type="xs:decimal" />
+      <xs:element minOccurs="0" name="nroFactura" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="nroGuia" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="nroPedido" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="referencia" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="status" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="MobileFacturaSAP" nillable="true" type="tns:MobileFacturaSAP" />
+  <xs:complexType name="MobileResponseOfMobileTransportistaListLBPOpb6l">
+    <xs:annotation>
+      <xs:appinfo>
+        <GenericType Name="MobileResponseOf{0}{#}" Namespace="http://schemas.datacontract.org/2004/07/Voxiva.TDMDigitalBE.Modelo.DTO" xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+          <GenericParameter Name="MobileTransportistaList" Namespace="http://schemas.datacontract.org/2004/07/Voxiva.TDMDigitalBE.Modelo.DTO" />
+        </GenericType>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element minOccurs="0" name="data" nillable="true" type="tns:MobileTransportistaList" />
+      <xs:element minOccurs="0" name="message" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="status" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="MobileResponseOfMobileTransportistaListLBPOpb6l" nillable="true" type="tns:MobileResponseOfMobileTransportistaListLBPOpb6l" />
+  <xs:complexType name="MobileTransportistaList">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Transportista" nillable="true" type="tns:ArrayOfTransportistaDTO" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="MobileTransportistaList" nillable="true" type="tns:MobileTransportistaList" />
+  <xs:complexType name="ArrayOfTransportistaDTO">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="TransportistaDTO" nillable="true" type="tns:TransportistaDTO" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfTransportistaDTO" nillable="true" type="tns:ArrayOfTransportistaDTO" />
+  <xs:complexType name="TransportistaDTO">
+    <xs:sequence>
+      <xs:element xmlns:q4="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="listaTipoUnidades" nillable="true" type="q4:ArrayOfstring" />
+      <xs:element minOccurs="0" name="listaUnidades" nillable="true" type="tns:ArrayOfUnidadTransporteDTO" />
+      <xs:element xmlns:q5="http://schemas.datacontract.org/2004/07/Voxiva.TDMDigitalBE.Modelo.Domain" minOccurs="0" name="transportista" nillable="true" type="q5:Transportista" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="TransportistaDTO" nillable="true" type="tns:TransportistaDTO" />
+  <xs:complexType name="ArrayOfUnidadTransporteDTO">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="UnidadTransporteDTO" nillable="true" type="tns:UnidadTransporteDTO" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfUnidadTransporteDTO" nillable="true" type="tns:ArrayOfUnidadTransporteDTO" />
+  <xs:complexType name="UnidadTransporteDTO">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Chofer" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ChoferAlterno" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="DNIChofer" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="DNIChoferAlterno" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Estado" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="FechaUsuarioCreacion" type="xs:long" />
+      <xs:element minOccurs="0" name="IdTransportista" type="xs:int" />
+      <xs:element minOccurs="0" name="IdUnidad" type="xs:int" />
+      <xs:element minOccurs="0" name="NombreEmpresa" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Placa" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Placa2" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="RUC" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="TipoUnidad" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="codTracking" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="UnidadTransporteDTO" nillable="true" type="tns:UnidadTransporteDTO" />
+  <xs:complexType name="MobileResponseOfMobileTransportistaLBPOpb6l">
+    <xs:annotation>
+      <xs:appinfo>
+        <GenericType Name="MobileResponseOf{0}{#}" Namespace="http://schemas.datacontract.org/2004/07/Voxiva.TDMDigitalBE.Modelo.DTO" xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+          <GenericParameter Name="MobileTransportista" Namespace="http://schemas.datacontract.org/2004/07/Voxiva.TDMDigitalBE.Modelo.DTO" />
+        </GenericType>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element minOccurs="0" name="data" nillable="true" type="tns:MobileTransportista" />
+      <xs:element minOccurs="0" name="message" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="status" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="MobileResponseOfMobileTransportistaLBPOpb6l" nillable="true" type="tns:MobileResponseOfMobileTransportistaLBPOpb6l" />
+  <xs:complexType name="MobileTransportista">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="IdTransportista" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="MobileTransportista" nillable="true" type="tns:MobileTransportista" />
+  <xs:complexType name="MobileResponseOfMobilePaisListLBPOpb6l">
+    <xs:annotation>
+      <xs:appinfo>
+        <GenericType Name="MobileResponseOf{0}{#}" Namespace="http://schemas.datacontract.org/2004/07/Voxiva.TDMDigitalBE.Modelo.DTO" xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+          <GenericParameter Name="MobilePaisList" Namespace="http://schemas.datacontract.org/2004/07/Voxiva.TDMDigitalBE.Modelo.DTO" />
+        </GenericType>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element minOccurs="0" name="data" nillable="true" type="tns:MobilePaisList" />
+      <xs:element minOccurs="0" name="message" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="status" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="MobileResponseOfMobilePaisListLBPOpb6l" nillable="true" type="tns:MobileResponseOfMobilePaisListLBPOpb6l" />
+  <xs:complexType name="MobilePaisList">
+    <xs:sequence>
+      <xs:element xmlns:q6="http://schemas.datacontract.org/2004/07/Voxiva.TDMDigitalBE.Modelo.Domain" minOccurs="0" name="Paises" nillable="true" type="q6:ArrayOfPais" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="MobilePaisList" nillable="true" type="tns:MobilePaisList" />
+  <xs:complexType name="MobileResponseOfMobileDepartamentoListLBPOpb6l">
+    <xs:annotation>
+      <xs:appinfo>
+        <GenericType Name="MobileResponseOf{0}{#}" Namespace="http://schemas.datacontract.org/2004/07/Voxiva.TDMDigitalBE.Modelo.DTO" xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+          <GenericParameter Name="MobileDepartamentoList" Namespace="http://schemas.datacontract.org/2004/07/Voxiva.TDMDigitalBE.Modelo.DTO" />
+        </GenericType>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element minOccurs="0" name="data" nillable="true" type="tns:MobileDepartamentoList" />
+      <xs:element minOccurs="0" name="message" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="status" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="MobileResponseOfMobileDepartamentoListLBPOpb6l" nillable="true" type="tns:MobileResponseOfMobileDepartamentoListLBPOpb6l" />
+  <xs:complexType name="MobileDepartamentoList">
+    <xs:sequence>
+      <xs:element xmlns:q7="http://schemas.datacontract.org/2004/07/Voxiva.TDMDigitalBE.Modelo.Domain" minOccurs="0" name="Departamentos" nillable="true" type="q7:ArrayOfDepartamento" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="MobileDepartamentoList" nillable="true" type="tns:MobileDepartamentoList" />
+  <xs:complexType name="MobileResponseOfMobileDistritoListLBPOpb6l">
+    <xs:annotation>
+      <xs:appinfo>
+        <GenericType Name="MobileResponseOf{0}{#}" Namespace="http://schemas.datacontract.org/2004/07/Voxiva.TDMDigitalBE.Modelo.DTO" xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+          <GenericParameter Name="MobileDistritoList" Namespace="http://schemas.datacontract.org/2004/07/Voxiva.TDMDigitalBE.Modelo.DTO" />
+        </GenericType>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element minOccurs="0" name="data" nillable="true" type="tns:MobileDistritoList" />
+      <xs:element minOccurs="0" name="message" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="status" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="MobileResponseOfMobileDistritoListLBPOpb6l" nillable="true" type="tns:MobileResponseOfMobileDistritoListLBPOpb6l" />
+  <xs:complexType name="MobileDistritoList">
+    <xs:sequence>
+      <xs:element xmlns:q8="http://schemas.datacontract.org/2004/07/Voxiva.TDMDigitalBE.Modelo.Domain" minOccurs="0" name="Distritos" nillable="true" type="q8:ArrayOfDistrito" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="MobileDistritoList" nillable="true" type="tns:MobileDistritoList" />
+  <xs:complexType name="MobileResponseOfMobileProvinciaListLBPOpb6l">
+    <xs:annotation>
+      <xs:appinfo>
+        <GenericType Name="MobileResponseOf{0}{#}" Namespace="http://schemas.datacontract.org/2004/07/Voxiva.TDMDigitalBE.Modelo.DTO" xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+          <GenericParameter Name="MobileProvinciaList" Namespace="http://schemas.datacontract.org/2004/07/Voxiva.TDMDigitalBE.Modelo.DTO" />
+        </GenericType>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element minOccurs="0" name="data" nillable="true" type="tns:MobileProvinciaList" />
+      <xs:element minOccurs="0" name="message" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="status" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="MobileResponseOfMobileProvinciaListLBPOpb6l" nillable="true" type="tns:MobileResponseOfMobileProvinciaListLBPOpb6l" />
+  <xs:complexType name="MobileProvinciaList">
+    <xs:sequence>
+      <xs:element xmlns:q9="http://schemas.datacontract.org/2004/07/Voxiva.TDMDigitalBE.Modelo.Domain" minOccurs="0" name="Provincias" nillable="true" type="q9:ArrayOfProvincia" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="MobileProvinciaList" nillable="true" type="tns:MobileProvinciaList" />
+  <xs:complexType name="MobileResponseOfMobileUnidadTransporteDTOListLBPOpb6l">
+    <xs:annotation>
+      <xs:appinfo>
+        <GenericType Name="MobileResponseOf{0}{#}" Namespace="http://schemas.datacontract.org/2004/07/Voxiva.TDMDigitalBE.Modelo.DTO" xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+          <GenericParameter Name="MobileUnidadTransporteDTOList" Namespace="http://schemas.datacontract.org/2004/07/Voxiva.TDMDigitalBE.Modelo.DTO" />
+        </GenericType>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element minOccurs="0" name="data" nillable="true" type="tns:MobileUnidadTransporteDTOList" />
+      <xs:element minOccurs="0" name="message" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="status" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="MobileResponseOfMobileUnidadTransporteDTOListLBPOpb6l" nillable="true" type="tns:MobileResponseOfMobileUnidadTransporteDTOListLBPOpb6l" />
+  <xs:complexType name="MobileUnidadTransporteDTOList">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="UnidadTransporte" nillable="true" type="tns:ArrayOfUnidadTransporteDTO" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="MobileUnidadTransporteDTOList" nillable="true" type="tns:MobileUnidadTransporteDTOList" />
+  <xs:complexType name="MobileResponseOfMobileUnidadTransporteDTOLBPOpb6l">
+    <xs:annotation>
+      <xs:appinfo>
+        <GenericType Name="MobileResponseOf{0}{#}" Namespace="http://schemas.datacontract.org/2004/07/Voxiva.TDMDigitalBE.Modelo.DTO" xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+          <GenericParameter Name="MobileUnidadTransporteDTO" Namespace="http://schemas.datacontract.org/2004/07/Voxiva.TDMDigitalBE.Modelo.DTO" />
+        </GenericType>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element minOccurs="0" name="data" nillable="true" type="tns:MobileUnidadTransporteDTO" />
+      <xs:element minOccurs="0" name="message" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="status" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="MobileResponseOfMobileUnidadTransporteDTOLBPOpb6l" nillable="true" type="tns:MobileResponseOfMobileUnidadTransporteDTOLBPOpb6l" />
+  <xs:complexType name="MobileUnidadTransporteDTO">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="IdUnidadTransporte" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="MobileUnidadTransporteDTO" nillable="true" type="tns:MobileUnidadTransporteDTO" />
+  <xs:complexType name="MobileResp">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="message" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="status" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="MobileResp" nillable="true" type="tns:MobileResp" />
+  <xs:complexType name="MobileResponseOfMobileMantenedorScoringLBPOpb6l">
+    <xs:annotation>
+      <xs:appinfo>
+        <GenericType Name="MobileResponseOf{0}{#}" Namespace="http://schemas.datacontract.org/2004/07/Voxiva.TDMDigitalBE.Modelo.DTO" xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+          <GenericParameter Name="MobileMantenedorScoring" Namespace="http://schemas.datacontract.org/2004/07/Voxiva.TDMDigitalBE.Modelo.DTO" />
+        </GenericType>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element minOccurs="0" name="data" nillable="true" type="tns:MobileMantenedorScoring" />
+      <xs:element minOccurs="0" name="message" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="status" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="MobileResponseOfMobileMantenedorScoringLBPOpb6l" nillable="true" type="tns:MobileResponseOfMobileMantenedorScoringLBPOpb6l" />
+  <xs:complexType name="MobileMantenedorScoring">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="mensaje" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="scoringDTO" nillable="true" type="tns:ScoringDTO" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="MobileMantenedorScoring" nillable="true" type="tns:MobileMantenedorScoring" />
+  <xs:complexType name="ScoringDTO">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Cantidad" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Estado" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="FechaUsuarioCreacion" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="IdContactoCliente" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="IdRequerimiento" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="IdTipoScoring" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ScoringDTO" nillable="true" type="tns:ScoringDTO" />
+  <xs:complexType name="MobileResponseOfMobileEntregaPedidoListLBPOpb6l">
+    <xs:annotation>
+      <xs:appinfo>
+        <GenericType Name="MobileResponseOf{0}{#}" Namespace="http://schemas.datacontract.org/2004/07/Voxiva.TDMDigitalBE.Modelo.DTO" xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+          <GenericParameter Name="MobileEntregaPedidoList" Namespace="http://schemas.datacontract.org/2004/07/Voxiva.TDMDigitalBE.Modelo.DTO" />
+        </GenericType>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element minOccurs="0" name="data" nillable="true" type="tns:MobileEntregaPedidoList" />
+      <xs:element minOccurs="0" name="message" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="status" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="MobileResponseOfMobileEntregaPedidoListLBPOpb6l" nillable="true" type="tns:MobileResponseOfMobileEntregaPedidoListLBPOpb6l" />
+  <xs:complexType name="MobileEntregaPedidoList">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="pedidoEntrega" nillable="true" type="tns:ArrayOfPedidoDTO" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="MobileEntregaPedidoList" nillable="true" type="tns:MobileEntregaPedidoList" />
+  <xs:complexType name="ArrayOfPedidoDTO">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="PedidoDTO" nillable="true" type="tns:PedidoDTO" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfPedidoDTO" nillable="true" type="tns:ArrayOfPedidoDTO" />
+  <xs:complexType name="PedidoDTO">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="CodOportunidad" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="DescripcionEstPedido" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Estado" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="FechaPedido" nillable="true" type="xs:long" />
+      <xs:element minOccurs="0" name="PedidoCliente" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PedidoVenta" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Placa1" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Placa2" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="UsuarioPedido" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="listaEntregas" nillable="true" type="tns:ArrayOfEntregaDTO" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="PedidoDTO" nillable="true" type="tns:PedidoDTO" />
+  <xs:complexType name="ArrayOfEntregaDTO">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="EntregaDTO" nillable="true" type="tns:EntregaDTO" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfEntregaDTO" nillable="true" type="tns:ArrayOfEntregaDTO" />
+  <xs:complexType name="EntregaDTO">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="CodEntrega" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CodPedido" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CondExp" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="DescripcionCondExp" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="DescripcionEstEnt" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Estado" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="EstadoEntrega" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="FechaCarga" nillable="true" type="xs:long" />
+      <xs:element minOccurs="0" name="FechaCreacion" nillable="true" type="xs:long" />
+      <xs:element minOccurs="0" name="FechaEntrega" nillable="true" type="xs:long" />
+      <xs:element minOccurs="0" name="FechaGuia" nillable="true" type="xs:long" />
+      <xs:element minOccurs="0" name="FechaRecoge" nillable="true" type="xs:long" />
+      <xs:element minOccurs="0" name="GuiaLegal" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="LugarEntrega" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="NumeroGuia" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="UsuarioEntrega" nillable="true" type="xs:string" />
+      <xs:element xmlns:q10="http://schemas.datacontract.org/2004/07/Voxiva.TDMDigitalBE.Modelo.Clases" minOccurs="0" name="listaCertificadosCalidadOC" nillable="true" type="q10:ArrayOfCertificadocalidadOC" />
+      <xs:element minOccurs="0" name="listaEstado" nillable="true" type="tns:ArrayOfEstadosDTO" />
+      <xs:element minOccurs="0" name="listaProductos" nillable="true" type="tns:ArrayOfProductoEntregaDTO" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="EntregaDTO" nillable="true" type="tns:EntregaDTO" />
+  <xs:complexType name="ArrayOfEstadosDTO">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="EstadosDTO" nillable="true" type="tns:EstadosDTO" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfEstadosDTO" nillable="true" type="tns:ArrayOfEstadosDTO" />
+  <xs:complexType name="EstadosDTO">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="CodEstado" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="FechaEntrega" nillable="true" type="xs:long" />
+      <xs:element minOccurs="0" name="IdEntrega" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="NomEstado" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="EstadosDTO" nillable="true" type="tns:EstadosDTO" />
+  <xs:complexType name="ArrayOfProductoEntregaDTO">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="ProductoEntregaDTO" nillable="true" type="tns:ProductoEntregaDTO" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfProductoEntregaDTO" nillable="true" type="tns:ArrayOfProductoEntregaDTO" />
+  <xs:complexType name="ProductoEntregaDTO">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Cantidad" type="xs:decimal" />
+      <xs:element minOccurs="0" name="CodEntrega" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CodProducto" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Lote" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="NombreProducto" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="OrdenCompra" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PosEntrega" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="UniBase" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="UniVenta" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="UrlCertificado" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ProductoEntregaDTO" nillable="true" type="tns:ProductoEntregaDTO" />
+  <xs:complexType name="MobileResponseOfMobileEntregaEstadoListLBPOpb6l">
+    <xs:annotation>
+      <xs:appinfo>
+        <GenericType Name="MobileResponseOf{0}{#}" Namespace="http://schemas.datacontract.org/2004/07/Voxiva.TDMDigitalBE.Modelo.DTO" xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+          <GenericParameter Name="MobileEntregaEstadoList" Namespace="http://schemas.datacontract.org/2004/07/Voxiva.TDMDigitalBE.Modelo.DTO" />
+        </GenericType>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element minOccurs="0" name="data" nillable="true" type="tns:MobileEntregaEstadoList" />
+      <xs:element minOccurs="0" name="message" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="status" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="MobileResponseOfMobileEntregaEstadoListLBPOpb6l" nillable="true" type="tns:MobileResponseOfMobileEntregaEstadoListLBPOpb6l" />
+  <xs:complexType name="MobileEntregaEstadoList">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="EstadosList" nillable="true" type="tns:ArrayOfEstadosDTO" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="MobileEntregaEstadoList" nillable="true" type="tns:MobileEntregaEstadoList" />
+  <xs:complexType name="MobileResponseOfMobileCertificadoCalidadLBPOpb6l">
+    <xs:annotation>
+      <xs:appinfo>
+        <GenericType Name="MobileResponseOf{0}{#}" Namespace="http://schemas.datacontract.org/2004/07/Voxiva.TDMDigitalBE.Modelo.DTO" xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+          <GenericParameter Name="MobileCertificadoCalidad" Namespace="http://schemas.datacontract.org/2004/07/Voxiva.TDMDigitalBE.Modelo.DTO" />
+        </GenericType>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element minOccurs="0" name="data" nillable="true" type="tns:MobileCertificadoCalidad" />
+      <xs:element minOccurs="0" name="message" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="status" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="MobileResponseOfMobileCertificadoCalidadLBPOpb6l" nillable="true" type="tns:MobileResponseOfMobileCertificadoCalidadLBPOpb6l" />
+  <xs:complexType name="MobileCertificadoCalidad">
+    <xs:sequence>
+      <xs:element xmlns:q11="http://schemas.datacontract.org/2004/07/Voxiva.TDMDigitalBE.Modelo.Clases" minOccurs="0" name="certificadoCalidad" nillable="true" type="q11:CertificadoCalidadView" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="MobileCertificadoCalidad" nillable="true" type="tns:MobileCertificadoCalidad" />
+  <xs:complexType name="MobileResponseOfMobileEntregaCerticadoLBPOpb6l">
+    <xs:annotation>
+      <xs:appinfo>
+        <GenericType Name="MobileResponseOf{0}{#}" Namespace="http://schemas.datacontract.org/2004/07/Voxiva.TDMDigitalBE.Modelo.DTO" xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+          <GenericParameter Name="MobileEntregaCerticado" Namespace="http://schemas.datacontract.org/2004/07/Voxiva.TDMDigitalBE.Modelo.DTO" />
+        </GenericType>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element minOccurs="0" name="data" nillable="true" type="tns:MobileEntregaCerticado" />
+      <xs:element minOccurs="0" name="message" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="status" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="MobileResponseOfMobileEntregaCerticadoLBPOpb6l" nillable="true" type="tns:MobileResponseOfMobileEntregaCerticadoLBPOpb6l" />
+  <xs:complexType name="MobileEntregaCerticado">
+    <xs:sequence>
+      <xs:element xmlns:q12="http://schemas.datacontract.org/2004/07/Voxiva.TDMDigitalBE.Modelo.Clases" minOccurs="0" name="respuesta" nillable="true" type="q12:Respuesta" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="MobileEntregaCerticado" nillable="true" type="tns:MobileEntregaCerticado" />
+  <xs:complexType name="MobileResponseOfMobileLTResponseLBPOpb6l">
+    <xs:annotation>
+      <xs:appinfo>
+        <GenericType Name="MobileResponseOf{0}{#}" Namespace="http://schemas.datacontract.org/2004/07/Voxiva.TDMDigitalBE.Modelo.DTO" xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+          <GenericParameter Name="MobileLTResponse" Namespace="http://schemas.datacontract.org/2004/07/Voxiva.TDMDigitalBE.Modelo.DTO" />
+        </GenericType>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element minOccurs="0" name="data" nillable="true" type="tns:MobileLTResponse" />
+      <xs:element minOccurs="0" name="message" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="status" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="MobileResponseOfMobileLTResponseLBPOpb6l" nillable="true" type="tns:MobileResponseOfMobileLTResponseLBPOpb6l" />
+  <xs:complexType name="MobileLTResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="tracking" nillable="true" type="tns:ArrayOfTrackingDTO" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="MobileLTResponse" nillable="true" type="tns:MobileLTResponse" />
+  <xs:complexType name="ArrayOfTrackingDTO">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="TrackingDTO" nillable="true" type="tns:TrackingDTO" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfTrackingDTO" nillable="true" type="tns:ArrayOfTrackingDTO" />
+  <xs:complexType name="TrackingDTO">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="accountID" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="address" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="deviceID" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="latitude" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="longitude" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="speedKPH" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="statusCode" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="timestamp" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="TrackingDTO" nillable="true" type="tns:TrackingDTO" />
+  <xs:complexType name="MobileResponseOfClienteDTOLBPOpb6l">
+    <xs:annotation>
+      <xs:appinfo>
+        <GenericType Name="MobileResponseOf{0}{#}" Namespace="http://schemas.datacontract.org/2004/07/Voxiva.TDMDigitalBE.Modelo.DTO" xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+          <GenericParameter Name="ClienteDTO" Namespace="http://schemas.datacontract.org/2004/07/Voxiva.TDMDigitalBE.Modelo.DTO" />
+        </GenericType>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element minOccurs="0" name="data" nillable="true" type="tns:ClienteDTO" />
+      <xs:element minOccurs="0" name="message" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="status" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="MobileResponseOfClienteDTOLBPOpb6l" nillable="true" type="tns:MobileResponseOfClienteDTOLBPOpb6l" />
+  <xs:complexType name="ClienteDTO">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="cliente_CodigoClienteTdm" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="cliente_Direccion" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="cliente_Email" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="cliente_FechaUsuarioCreacion" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="cliente_IdCliente" type="xs:int" />
+      <xs:element minOccurs="0" name="cliente_IdDepartamento" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="cliente_NroDocumento" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="cliente_Ramo" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="cliente_RazonSocial" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="cliente_SectorEconomicoSAPs" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="cliente_Telefono" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="departamento_Denominacion" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="distrito_NomDistrito" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="pais_NomOficialPais" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="permisosUser" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="sector_Denominacion" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ClienteDTO" nillable="true" type="tns:ClienteDTO" />
+  <xs:complexType name="MobileResponseOfContactoClienteDTOLBPOpb6l">
+    <xs:annotation>
+      <xs:appinfo>
+        <GenericType Name="MobileResponseOf{0}{#}" Namespace="http://schemas.datacontract.org/2004/07/Voxiva.TDMDigitalBE.Modelo.DTO" xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+          <GenericParameter Name="ContactoClienteDTO" Namespace="http://schemas.datacontract.org/2004/07/Voxiva.TDMDigitalBE.Modelo.DTO" />
+        </GenericType>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element minOccurs="0" name="data" nillable="true" type="tns:ContactoClienteDTO" />
+      <xs:element minOccurs="0" name="message" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="status" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="MobileResponseOfContactoClienteDTOLBPOpb6l" nillable="true" type="tns:MobileResponseOfContactoClienteDTOLBPOpb6l" />
+  <xs:complexType name="MobileResponseOfMobileNotificacionLBPOpb6l">
+    <xs:annotation>
+      <xs:appinfo>
+        <GenericType Name="MobileResponseOf{0}{#}" Namespace="http://schemas.datacontract.org/2004/07/Voxiva.TDMDigitalBE.Modelo.DTO" xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+          <GenericParameter Name="MobileNotificacion" Namespace="http://schemas.datacontract.org/2004/07/Voxiva.TDMDigitalBE.Modelo.DTO" />
+        </GenericType>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element minOccurs="0" name="data" nillable="true" type="tns:MobileNotificacion" />
+      <xs:element minOccurs="0" name="message" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="status" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="MobileResponseOfMobileNotificacionLBPOpb6l" nillable="true" type="tns:MobileResponseOfMobileNotificacionLBPOpb6l" />
+  <xs:complexType name="MobileNotificacion">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="IdNotificacion" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="MobileNotificacion" nillable="true" type="tns:MobileNotificacion" />
+  <xs:complexType name="MobileResponseOfMobileNotificacionListLBPOpb6l">
+    <xs:annotation>
+      <xs:appinfo>
+        <GenericType Name="MobileResponseOf{0}{#}" Namespace="http://schemas.datacontract.org/2004/07/Voxiva.TDMDigitalBE.Modelo.DTO" xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+          <GenericParameter Name="MobileNotificacionList" Namespace="http://schemas.datacontract.org/2004/07/Voxiva.TDMDigitalBE.Modelo.DTO" />
+        </GenericType>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element minOccurs="0" name="data" nillable="true" type="tns:MobileNotificacionList" />
+      <xs:element minOccurs="0" name="message" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="status" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="MobileResponseOfMobileNotificacionListLBPOpb6l" nillable="true" type="tns:MobileResponseOfMobileNotificacionListLBPOpb6l" />
+  <xs:complexType name="MobileNotificacionList">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Mensajes" nillable="true" type="tns:ArrayOfNotificacionDTO" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="MobileNotificacionList" nillable="true" type="tns:MobileNotificacionList" />
+  <xs:complexType name="MobileResponseOfMobileRegistrosUnidadTDMLBPOpb6l">
+    <xs:annotation>
+      <xs:appinfo>
+        <GenericType Name="MobileResponseOf{0}{#}" Namespace="http://schemas.datacontract.org/2004/07/Voxiva.TDMDigitalBE.Modelo.DTO" xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+          <GenericParameter Name="MobileRegistrosUnidadTDM" Namespace="http://schemas.datacontract.org/2004/07/Voxiva.TDMDigitalBE.Modelo.DTO" />
+        </GenericType>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element minOccurs="0" name="data" nillable="true" type="tns:MobileRegistrosUnidadTDM" />
+      <xs:element minOccurs="0" name="message" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="status" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="MobileResponseOfMobileRegistrosUnidadTDMLBPOpb6l" nillable="true" type="tns:MobileResponseOfMobileRegistrosUnidadTDMLBPOpb6l" />
+  <xs:complexType name="MobileRegistrosUnidadTDM">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="resultado" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="MobileRegistrosUnidadTDM" nillable="true" type="tns:MobileRegistrosUnidadTDM" />
+  <xs:complexType name="MobileResponseOfMobileEntregaDTOLBPOpb6l">
+    <xs:annotation>
+      <xs:appinfo>
+        <GenericType Name="MobileResponseOf{0}{#}" Namespace="http://schemas.datacontract.org/2004/07/Voxiva.TDMDigitalBE.Modelo.DTO" xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+          <GenericParameter Name="MobileEntregaDTO" Namespace="http://schemas.datacontract.org/2004/07/Voxiva.TDMDigitalBE.Modelo.DTO" />
+        </GenericType>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element minOccurs="0" name="data" nillable="true" type="tns:MobileEntregaDTO" />
+      <xs:element minOccurs="0" name="message" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="status" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="MobileResponseOfMobileEntregaDTOLBPOpb6l" nillable="true" type="tns:MobileResponseOfMobileEntregaDTOLBPOpb6l" />
+  <xs:complexType name="MobileEntregaDTO">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="entregaDTO" nillable="true" type="tns:EntregaDTO" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="MobileEntregaDTO" nillable="true" type="tns:MobileEntregaDTO" />
+  <xs:complexType name="MobileResponseOfMobileListEstadosDTOLBPOpb6l">
+    <xs:annotation>
+      <xs:appinfo>
+        <GenericType Name="MobileResponseOf{0}{#}" Namespace="http://schemas.datacontract.org/2004/07/Voxiva.TDMDigitalBE.Modelo.DTO" xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+          <GenericParameter Name="MobileListEstadosDTO" Namespace="http://schemas.datacontract.org/2004/07/Voxiva.TDMDigitalBE.Modelo.DTO" />
+        </GenericType>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element minOccurs="0" name="data" nillable="true" type="tns:MobileListEstadosDTO" />
+      <xs:element minOccurs="0" name="message" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="status" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="MobileResponseOfMobileListEstadosDTOLBPOpb6l" nillable="true" type="tns:MobileResponseOfMobileListEstadosDTOLBPOpb6l" />
+  <xs:complexType name="MobileListEstadosDTO">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="lstEstadosDTO" nillable="true" type="tns:ArrayOfEstadosDTO" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="MobileListEstadosDTO" nillable="true" type="tns:MobileListEstadosDTO" />
+  <xs:complexType name="MobileResponseOfMobileListCargaEntregaDTOLBPOpb6l">
+    <xs:annotation>
+      <xs:appinfo>
+        <GenericType Name="MobileResponseOf{0}{#}" Namespace="http://schemas.datacontract.org/2004/07/Voxiva.TDMDigitalBE.Modelo.DTO" xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+          <GenericParameter Name="MobileListCargaEntregaDTO" Namespace="http://schemas.datacontract.org/2004/07/Voxiva.TDMDigitalBE.Modelo.DTO" />
+        </GenericType>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element minOccurs="0" name="data" nillable="true" type="tns:MobileListCargaEntregaDTO" />
+      <xs:element minOccurs="0" name="message" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="status" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="MobileResponseOfMobileListCargaEntregaDTOLBPOpb6l" nillable="true" type="tns:MobileResponseOfMobileListCargaEntregaDTOLBPOpb6l" />
+  <xs:complexType name="MobileListCargaEntregaDTO">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="lstCargaEntregaDTO" nillable="true" type="tns:ArrayOfEntregaDTO" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="MobileListCargaEntregaDTO" nillable="true" type="tns:MobileListCargaEntregaDTO" />
+  <xs:complexType name="MobileResponseOfMobileNotificacionPushListLBPOpb6l">
+    <xs:annotation>
+      <xs:appinfo>
+        <GenericType Name="MobileResponseOf{0}{#}" Namespace="http://schemas.datacontract.org/2004/07/Voxiva.TDMDigitalBE.Modelo.DTO" xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+          <GenericParameter Name="MobileNotificacionPushList" Namespace="http://schemas.datacontract.org/2004/07/Voxiva.TDMDigitalBE.Modelo.DTO" />
+        </GenericType>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element minOccurs="0" name="data" nillable="true" type="tns:MobileNotificacionPushList" />
+      <xs:element minOccurs="0" name="message" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="status" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="MobileResponseOfMobileNotificacionPushListLBPOpb6l" nillable="true" type="tns:MobileResponseOfMobileNotificacionPushListLBPOpb6l" />
+  <xs:complexType name="MobileNotificacionPushList">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="notificaciones" nillable="true" type="tns:ArrayOfNotificacionDTO" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="MobileNotificacionPushList" nillable="true" type="tns:MobileNotificacionPushList" />
+</xs:schema>
