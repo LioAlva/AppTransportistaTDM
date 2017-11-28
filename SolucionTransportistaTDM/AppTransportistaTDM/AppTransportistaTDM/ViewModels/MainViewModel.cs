@@ -18,6 +18,7 @@ namespace AppTransportistaTDM.ViewModels
 
         public MainViewModel()
         {
+            Menu = new ObservableCollection<MenuItemViewModel>();   
             LoadMenu();
             //Create Views
             NewLogin = new LoginViewModel();
@@ -25,8 +26,56 @@ namespace AppTransportistaTDM.ViewModels
 
         private void LoadMenu()
         {
-            Menu = new ObservableCollection<MenuItemViewModel>();
+            Menu.Add(new MenuItemViewModel
+            {
+                Icon = "ic_action_product.png",
+                PageName = "ProductsPage",
+                Title = "Productos"
+            });
+
+            Menu.Add(new MenuItemViewModel
+            {
+                Icon = "ic_action_customer.png",
+                PageName = "CustomersPage",
+                Title = "Clientes"
+            });
+
+            Menu.Add(new MenuItemViewModel
+            {
+                Icon = "ic_action_order.png",
+                PageName = "OrdersPage",
+                Title = "Pedidos"
+            });
+
+            Menu.Add(new MenuItemViewModel
+            {
+                Icon = "ic_action_delivery.png",
+                PageName = "DeliveriesPage",
+                Title = "Entregas"
+            });
+
+            Menu.Add(new MenuItemViewModel
+            {
+                Icon = "ic_action_sync.png",
+                PageName = "SyncPage",
+                Title = "Sincronizar"
+            });
+
+            Menu.Add(new MenuItemViewModel
+            {
+                Icon = "ic_action_setup.png",
+                PageName = "SetupPage",
+                Title = "Configuracion"
+            });
+
+            Menu.Add(new MenuItemViewModel
+            {
+                Icon = "ic_action_logut.png",
+                PageName = "LogutPage",
+                Title = "Cerrar Sesión"
+            });
         }
+
 
     }
 }

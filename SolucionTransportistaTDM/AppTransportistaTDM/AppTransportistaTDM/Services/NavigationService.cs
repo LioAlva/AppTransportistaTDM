@@ -15,9 +15,9 @@ namespace AppTransportistaTDM.Services
             App.Master.IsPresented = false;
             switch (pageName)
             {
-                //case "CustomersPage":
-                //    await App.Navigator.PushAsync(new CustomersPage());
-                //    ; break;
+                case "CustomersPage":
+                    await App.Navigator.PushAsync(new CustomersPage());
+                    ; break;
                 //case "DeliveriesPage":
                 //    await App.Navigator.PushAsync(new DeliveriesPage());
                 //    ; break;
